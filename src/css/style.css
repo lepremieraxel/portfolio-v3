@@ -4,3 +4,19 @@
   padding: 0;
   margin: 0;
 }
+
+:root{
+  --light-background-color: #EAE3D7;
+  --dark-background-color: #090909;
+  --light-text-color: #090909;
+  --dark-text-color: #EAE3D7;
+}
+
+body{
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--light-text-color);
+  background-color: var(--light-background-color);
+}
+a{
+  color: var(--light-text-color);
+}
