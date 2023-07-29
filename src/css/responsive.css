@@ -2,10 +2,12 @@
   body{
     padding: 2.5em;
   }
+  #home header{
+    margin-top: 5em;
+  }
   header{
     justify-content: center;
     gap: 2em;
-    margin-top: 5em;
   }
   header h1{
     align-items: center;
@@ -78,6 +80,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  #about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+  }
 }
 @media screen and (max-width: 750px){
   body{
@@ -86,8 +94,14 @@
   #home header h1{
     font-size: 6em;
   }
+  body:not(#home) header h1{
+    font-size: 3em;
+  }
   header .menu-mobile a{
     font-size: 4em;
+  }
+  #about{
+    padding: 3em 0em;
   }
 }
 @media screen and (max-width: 400px){
@@ -96,6 +110,10 @@
   }
   #home header h1{
     font-size: 3em;
+  }
+  body:not(#home) header h1{
+    font-size: 2em;
+    margin-top: 1.5em;
   }
   header .menu-mobile a{
     font-size: 3.5em;

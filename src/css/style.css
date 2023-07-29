@@ -50,6 +50,11 @@ header .burger, header .menu-mobile{
   line-height: .8;
   user-select: none;
 }
+body:not(#home) header h1{
+  font-size: 4em;
+  display: flex;
+  gap: .2em;
+}
 #home header h1 a:first-child{
   position: relative;
   left: .07em;
@@ -59,7 +64,10 @@ header nav{
   align-items: center;
   justify-content: space-between;
   font-size: 2em;
-  gap: .7em;
+  gap: 2em;
+}
+#home header nav{
+  gap: 1em;
 }
 header nav a{
   position: relative;
@@ -77,14 +85,14 @@ header nav a::before{
   transform-origin: right;
   transition: scale .3s ease-out;
 }
-header nav a:hover::before{
+header nav a:hover::before, header nav a.active::before{
   scale: 1;
   transform-origin: left;
 }
 #home header nav{
   flex-direction: column;
 }
-.toggle-container{
+#home .toggle-container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,13 +109,15 @@ header nav a:hover::before{
   padding: .7em;
   cursor: pointer;
 }
-#home .toggle-container input{
+.toggle-container input{
+  position: absolute;
   appearance: none;
   width: 0;
   height: 0;
 }
-#home .toggle-container .slider-content{
-  background: var(--light-background-color);
+header .toggle-container .slider-content{
+  background: var(--dark-background-color);
+  color: var(--dark-text-color);
   border-radius: 999px;
   font-size: 1.3em;
   font-weight: 500;
@@ -117,9 +127,19 @@ header nav a:hover::before{
   align-items: center;
   justify-content: center;
   transition: all .3s ease;
+  cursor: pointer;
+}
+#home .toggle-container .slider-content{
+  background: var(--light-background-color);
+  color: var(--light-text-color);
 }
 #home .toggle-container input:checked + .slider-content{
   transform: translateX(140%);
+}
+header .toggle-container{
+  display: flex;
+  align-items: center;
+  gap: 2em;
 }
 #home main{
   height: 100%;
@@ -189,4 +209,18 @@ header nav a:hover::before{
 #home .social-container a:hover::before{
   scale: 1;
   transform-origin: left;
+}
+#about{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 8em;
+  padding: 4em;
+}
+.about-para{
+  font-size: 1.5em;
+  width: 90%;
+  line-height: 1.5;
+}
+.about-picture{
+  width: 90%;
 }
