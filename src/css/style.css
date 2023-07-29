@@ -159,3 +159,24 @@ header nav a:hover::before{
   font-size: 1.2em;
   font-weight: 800;
 }
+#home .social-container a{
+  width: fit-content;
+  position: relative;
+}
+#home .social-container a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--light-text-color);
+  border-radius: 2px;
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale .3s ease-out;
+}
+#home .social-container a:hover::before{
+  scale: 1;
+  transform-origin: left;
+}
