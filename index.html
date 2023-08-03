@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
     <!-- META -->
     <meta charset="UTF-8" />
@@ -8,63 +8,68 @@
     <!-- LINK -->
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="/src/css/responsive.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/logo/favicon.ico" type="image/x-icon">
     <!-- TITLE -->
     <title>Axel Marcial's Portfolio - Web Developer</title>
   </head>
-  <body id="home">
-    <header>
-      <h1><a href="/">AXEL</a><a href="/">MARCIAL</a></h1>
-      <div class="burger">
-        <span></span><span></span>
-      </div>
-      <div class="menu-mobile">
-        <a href="/src/pages/about.html">ABOUT</a>
-        <a href="/src/pages/portfolio.html">PORTFOLIO</a>
-        <a href="/src/pages/contact.html">CONTACT</a>
-        <div class="switch-container">
-          <button>SWITCH TO DARK</button>
-          <button>SWITCH TO EN</button>
+  <body>
+    <div class="noise"></div>
+    <div class="container">
+      <header>
+        <h1 class="main-title home"><a href="/">AXEL</a><a href="/">MARCIAL</a></h1>
+        <div class="burger">
+          <span></span><span></span>
         </div>
-      </div>
-      <nav>
-        <a href="/src/pages/about.html">ABOUT</a>
-        <a href="/src/pages/portfolio.html">PORTFOLIO</a>
-        <a href="/src/pages/contact.html">CONTACT</a>
-      </nav>
-      <div class="toggle-container">
-        <label class="switch">
-          <input type="checkbox" value="theme">
-          <div class="slider-content">
-            <i class="ri-sun-fill"></i>
+        <div class="menu-mobile">
+          <a href="/src/pages/about.html"><span lang="en">ABOUT</span><span lang="fr">À PROPOS</span></a>
+          <a href="/src/pages/portfolio.html">PORTFOLIO</a>
+          <a href="/src/pages/contact.html">CONTACT</a>
+          <div class="switch-container">
+            <button class="cta" id="theme"><span lang="en">SWITCH TO DARK</span><span lang="fr">MODE SOMBRE</span></button>
+            <button class="cta" id="lang"><span lang="en">SWITCH TO FR</span><span lang="fr">PASSER EN ANGLAIS</span></button>
           </div>
-        </label>
-        <label class="switch">
-          <input type="checkbox" value="lang">
-          <div class="slider-content">FR</div>
-        </label>
-      </div>
-    </header>
-    <main>
-      <article class="about-container">
-        <p>Hi! I'm a 19 years old french web developer.<br>
-          I'm actually a student in a multimedia and internet degree at the institute of technology of Tarbes.<br>
-          My portfolio is slice in two parts, one for website and another for graphic design.&nbsp;<a href="/">MORE</a></p>
-      </article>
-      <article class="latest-container">
-        <p>LATEST WORK</p>
-        <img src="/assets/img/latest.png" alt="my latest work">
-      </article>
-      <article class="social-container">
-        <a href="">EMAIL</a>
-        <a href="">LINKEDIN</a>
-        <a href="">GITHUB</a>
-        <a href="">INSTAGRAM</a>
-        <a href="">LEGAL</a>
-      </article>
-    </main>
+        </div>
+        <nav class="home">
+          <a href="/src/pages/about.html">ABOUT</a>
+          <a href="/src/pages/portfolio.html">PORTFOLIO</a>
+          <a href="/src/pages/contact.html">CONTACT</a>
+        </nav>
+        <div class="toggle-container home">
+          <div class="toggle home" id="theme">
+            <div class="toggle-btn home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg></div>
+          </div>
+          <div class="toggle home" id="lang">
+            <div class="toggle-btn home">EN</div>
+          </div>
+        </div>
+      </header>
+      <main class="home">
+        <article class="about-container">
+          <p><span lang="en">Hi! I'm a 19 years old french web developer.<br>
+            I'm actually a student in a multimedia and internet degree at the institute of technology of Tarbes.<br>
+            My portfolio is slice in two parts, one for website and another for graphic design.</span><span lang="fr">Salut ! Je suis Axel, un développeur web français de 19 ans.
+              Je suis actuellement étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT de Tarbes.<br>
+              Mon portfolio est divisé en deux parties : une pour les sites web et l'autre pour les créations graphiques.</span> <a class="cta" href="/src/pages/about.html"><span lang="en">MORE</span><span lang="fr">VOIR&nbsp;PLUS</span></a></p>
+        </article>
+        <article class="latest-container">
+          <p lang="en">LATEST WORK</p>
+          <p lang="fr">DERNIÈRE CRÉATION</p>
+          <img src="/assets/img/latest.png" alt="my latest work">
+        </article>
+        <article class="social-container">
+          <a href="mailto:hello@axelmarcial.com">EMAIL</a>
+          <a href="https://github.com/lepremieraxel" target="_blank">GITHUB</a>
+          <a href="https://instagram.com/lepremieraxel" target="_blank">INSTAGRAM</a>
+          <a href="https://www.linkedin.com/in/lepremieraxel/" target="_blank">LINKEDIN</a>
+          <a href="/src/pages/legal.html"><span lang="en">LEGAL</span><span lang="fr">MENTIONS LÉGALES</span></a>
+        </article>
+      </main>
+    </div>
+    <script src="/src/js/toggleTheme.js"></script>
+    <script src="/src/js/toggleMenu.js"></script>
+    <script src="/src/js/toggleLang.js"></script>
   </body>
 </html>
