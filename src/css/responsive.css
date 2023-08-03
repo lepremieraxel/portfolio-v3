@@ -1,5 +1,8 @@
 @media screen and (max-width: 1300px) {
-  .main-title.home{
+  .container.home{
+    justify-content: start;
+  }
+  .main-title.home a{
     flex-direction: row;
     font-size: 4rem;
     line-height: normal;
@@ -19,10 +22,14 @@
     height: 100%;
     font-size: 1.1rem;
     background: var(--secondary-color);
+    right: 0 !important;
   }
   .toggle-btn.home svg{
-    width: 100%;
+    width: 80%;
     fill: var(--primary-color);
+  }
+  .portfolio-container{
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -97,6 +104,13 @@
   .container{
     justify-content: start;
   }
+  .about-container{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .latest-container{
     margin-top: 0;
   }
@@ -112,6 +126,15 @@
     justify-content: space-between;
     margin-top: 2rem;
   }
+  main.about{
+    grid-template-columns: 1fr .7fr;
+  }
+  .about-para{
+    width: 90%;
+  }
+  main.contact form{
+    width: 50vw;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -123,9 +146,36 @@
     grid-template-columns: 1fr;
     column-gap: 0;
   }
+  .about-container{
+    grid-row: 1;
+  }
   .latest-container{
     grid-column: 1;
     grid-row: 2;
+  }
+  main.about{
+    grid-template-columns: 1fr;
+  }
+  .about-para{
+    width: 100%;
+  }
+  .portfolio-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen  and (max-width: 768px) {
+  main.contact{
+    flex-direction: column;
+    gap: 3rem;
+  }
+  main.contact form{
+    width: 100%;
+  }
+  .social-links{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -134,23 +184,29 @@
     --paddingH: 1em;
     --paddingW: 1.5em;
   }
-  .main-title, .main-title.home{
+  .main-title a, .main-title.home a{
     font-size: 3rem;
+  }
+  .portfolio-container{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media screen and (max-width: 450px) {
-  .main-title, .main-title.home{
+  .main-title a, .main-title.home a{
     font-size: 2rem;
+  }
+  .menu-mobile{
+    padding: 4rem var(--paddingW);
+  }
+  .category-selector{
+    display: none;
   }
 }
 
 @media screen and (max-width: 330px) {
-  .main-title, .main-title.home{
+  .main-title a, .main-title.home a{
     font-size: 1.5rem;
-  }
-  .menu-mobile{
-    padding: 4rem 0;
   }
   .menu-mobile a{
     font-size: 3rem;
