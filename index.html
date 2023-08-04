@@ -15,9 +15,14 @@
     <!-- TITLE -->
     <title>Axel Marcial's Portfolio - Web Developer</title>
   </head>
-  <body>
+  <body data-barba="wrapper">
+    <div class="transition is-active">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <div class="noise"></div>
-    <div class="container home">
+    <div class="container home" data-barba="container">
       <header>
         <h1 class="main-title home"><a href="/"><span>AXEL</span><span>MARCIAL</span></a></h1>
         <div class="burger">
@@ -34,9 +39,44 @@
           </div>
         </div>
         <nav class="home">
-          <a href="/src/pages/about.html"><span lang="en">ABOUT</span><span lang="fr">À&nbsp;PROPOS</span></a>
-          <a href="/src/pages/portfolio.html">PORTFOLIO</a>
-          <a href="/src/pages/contact.html">CONTACT</a>
+          <a href="/src/pages/about.html" class="menu-item">
+            <span lang="en">
+              <div>
+                <span style="--index: 0">A</span><span style="--index: 1">B</span><span style="--index: 2">O</span><span style="--index: 3">U</span><span style="--index: 4">T</span>
+              </div>
+              <div class="hover-clone">
+                <span style="--index: 0">A</span><span style="--index: 1">B</span><span style="--index: 2">O</span><span style="--index: 3">U</span><span style="--index: 4">T</span>
+              </div>
+            </span>
+            <span lang="fr">
+              <div>
+                <span style="--index: 0">À&nbsp;</span><span style="--index: 1">P</span><span style="--index: 2">R</span><span style="--index: 3">O</span><span style="--index: 4">P</span><span style="--index: 5">O</span><span style="--index: 6">S</span>
+              </div>
+              <div class="hover-clone">
+                <span style="--index: 0">À&nbsp;</span><span style="--index: 1">P</span><span style="--index: 2">R</span><span style="--index: 3">O</span><span style="--index: 4">P</span><span style="--index: 5">O</span><span style="--index: 6">S</span>
+              </div>
+            </span>
+          </a>
+          <a href="/src/pages/portfolio.html" class="menu-item">
+            <span>
+              <div>
+                <span style="--index: 0">P</span><span style="--index: 1">O</span><span style="--index: 2">R</span><span style="--index: 3">T</span><span style="--index: 4">F</span><span style="--index: 5">O</span><span style="--index: 6">L</span><span style="--index: 7">I</span><span style="--index: 8">O</span>
+              </div>
+              <div class="hover-clone">
+                <span style="--index: 0">P</span><span style="--index: 1">O</span><span style="--index: 2">R</span><span style="--index: 3">T</span><span style="--index: 4">F</span><span style="--index: 5">O</span><span style="--index: 6">L</span><span style="--index: 7">I</span><span style="--index: 8">O</span>
+              </div>
+            </span>
+          </a>
+          <a href="/src/pages/contact.html" class="menu-item">
+            <span>
+              <div>
+                <span style="--index: 0">C</span><span style="--index: 1">O</span><span style="--index: 2">N</span><span style="--index: 3">T</span><span style="--index: 4">A</span><span style="--index: 5">C</span><span style="--index: 6">T</span>
+              </div>
+              <div class="hover-clone">
+                <span style="--index: 0">C</span><span style="--index: 1">O</span><span style="--index: 2">N</span><span style="--index: 3">T</span><span style="--index: 4">A</span><span style="--index: 5">C</span><span style="--index: 6">T</span>
+              </div>
+            </span>
+          </a>
         </nav>
         <div class="toggle-container home">
           <div class="toggle home" id="theme">
@@ -54,23 +94,30 @@
             My portfolio is slice in two parts, one for website and another for graphic design.</span><span lang="fr">Salut ! Je suis Axel, un développeur web français de 19 ans.
               Je suis actuellement étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT de Tarbes.<br>
               Mon portfolio est divisé en deux parties : une pour les sites web et l'autre pour les créations graphiques.</span> <a class="cta" href="/src/pages/about.html"><span lang="en">MORE</span><span lang="fr">VOIR&nbsp;PLUS</span></a></p>
-        </article>
-        <article class="latest-container">
-          <p lang="en">LATEST WORK</p>
-          <p lang="fr">DERNIÈRE CRÉATION</p>
-          <img src="/assets/img/latest-169.png" alt="my latest work">
-        </article>
+            </article>
+            <article class="latest-container">
+              <a href="/src/pages/page.html">
+                <p lang="en">LATEST WORK</p>
+                <p lang="fr">DERNIÈRE CRÉATION</p>
+                <img class="pf-el" src="/assets/img/latest-169.png" alt="my latest work" class="loadLang" data-portfolio-title="webdocu" data-portfolio-year="2022">
+              </a>
+            </article>
         <article class="social-container">
-          <a href="mailto:hello@axelmarcial.com">EMAIL</a>
-          <a href="https://github.com/lepremieraxel" target="_blank">GITHUB</a>
-          <a href="https://instagram.com/lepremieraxel" target="_blank">INSTAGRAM</a>
-          <a href="https://www.linkedin.com/in/lepremieraxel/" target="_blank">LINKEDIN</a>
-          <a href="/src/pages/legal.html"><span lang="en">LEGAL</span><span lang="fr">MENTIONS LÉGALES</span></a>
+          <a href="mailto:hello@axelmarcial.com" class="link">EMAIL</a>
+          <a href="https://github.com/lepremieraxel" target="_blank" class="link">GITHUB</a>
+          <a href="https://instagram.com/lepremieraxel" target="_blank" class="link">INSTAGRAM</a>
+          <a href="https://www.linkedin.com/in/lepremieraxel/" target="_blank" class="link">LINKEDIN</a>
+          <a href="/src/pages/mentions-légales.html" class="link"><span lang="en">LEGAL</span><span lang="fr">MENTIONS LÉGALES</span></a>
         </article>
       </main>
     </div>
+    <div class="cursor"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="/src/js/toggleTheme.js"></script>
     <script src="/src/js/toggleMenu.js"></script>
     <script src="/src/js/toggleLang.js"></script>
+    <script src="/src/js/cursor.js"></script>
+    <script src="/src/js/loader.js"></script>
+    <script src="/src/js/pageTransition.js"></script>
   </body>
 </html>

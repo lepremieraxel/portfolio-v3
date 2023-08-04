@@ -100,6 +100,7 @@
   .switch-container .cta{
     width: fit-content;
     color: var(--secondary-color);
+    font-size: 1.2rem;
   }
   .container{
     justify-content: start;
@@ -145,6 +146,8 @@
   main.home{
     grid-template-columns: 1fr;
     column-gap: 0;
+    row-gap: 6rem;
+    margin: 3rem 0 0;
   }
   .about-container{
     grid-row: 1;
@@ -155,6 +158,8 @@
   }
   main.about{
     grid-template-columns: 1fr;
+    gap: 4rem;
+    margin: 3rem 0 0;
   }
   .about-para{
     width: 100%;
@@ -167,7 +172,8 @@
 @media screen  and (max-width: 768px) {
   main.contact{
     flex-direction: column;
-    gap: 3rem;
+    gap: 6rem;
+    margin: 3rem 0;
   }
   main.contact form{
     width: 100%;

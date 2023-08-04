@@ -8,6 +8,8 @@
 }
 html{
   height: 100%;
+  cursor: none;
+  overflow-x: hidden;
 }
 :root{
   --primary-color: #eae3d7;
@@ -28,6 +30,78 @@ body {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
+/* [lang="fr"]{
+  display: none;
+} */
+.cursor{
+  width: 1rem;
+  height: 1rem;
+  background: var(--secondary-color);
+  border-radius: 999px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: .4s;
+}
+.cursor-inner{
+  text-transform: uppercase;
+}
+.cursor-small{
+  font-size: .7rem;
+  max-width: 60%;
+  text-align: center;
+  margin-top: .8rem;
+}
+.portfolio-hover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 .8rem;
+  aspect-ratio: 1;
+  mix-blend-mode: normal;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+}
+.dark-theme .portfolio-hover{
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.transition{
+  position: relative;
+}
+.transition div{
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 100vh;
+  transition: 2s cubic-bezier(.79,.01,.23,.84);
+}
+.transition.is-active div{
+  left: -100%;
+}
+.transition div:nth-child(even){
+  background: var(--secondary-color);
+}
+.transition div:nth-child(odd){
+  background-color: var(--primary-color);
+}
+.transition div:nth-child(1){
+  transition-delay: 0;
+}
+.transition div:nth-child(2){
+  transition-delay: .2s;
+}
+.transition div:nth-child(3){
+  transition-delay: .4s;
+}
 .noise{
 	position: fixed;
   top: 0;
@@ -35,7 +109,7 @@ body {
   width: 100%;
   height: 100vh;
 	background: transparent url("/assets/img/noise.gif") repeat 0 0;
-	opacity: .07;
+	opacity: .09;
   z-index: -1;
   /* animation: bg-animation 1s infinite; */
 }
@@ -55,6 +129,7 @@ body {
 a{
   text-decoration: none;
   color: var(--secondary-color);
+  cursor: none;
 }
 .cta{
   background: transparent;
@@ -63,6 +138,15 @@ a{
   padding: .2rem 1rem;
   user-select: none;
   color: var(--secondary-color);
+  transition: .5s;
+}
+.cta:hover{
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+.cta:hover .cursor{
+  width: 3rem;
 }
 .container{
   display: flex;
@@ -108,7 +192,39 @@ nav a{
   font-size: 1.7rem;
 }
 nav a.active{
-  font-weight: 600;
+  border-bottom: 2px solid
+}
+.menu-item > span{
+  position: relative;
+}
+.menu-item span > div:nth-child(1) span{
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: transform .5s ease;
+  transition-delay: calc(.05s * var(--index));
+  transform-origin: bottom;
+  display: inline-block
+}
+.menu-item span > div:nth-child(2) span {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: transform .5s ease;
+  transition-delay: calc(.05s * var(--index));
+  transform-origin: top;
+  display: inline-block;
+  transform: translateY(100%) rotateX(-90deg)
+}
+.menu-item:not(.active):hover span > div:nth-child(1) span {
+  transform: translateY(-100%) rotateX(-90deg)
+}
+.menu-item:not(.active):hover span > div:nth-child(2) span {
+  transform: translate(0) rotateX(0)
+}
+.hover-clone{
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .toggle-container{
   display: flex;
@@ -126,14 +242,11 @@ nav a.active{
   display: flex;
   align-items: center;
   padding: 0 .25rem;
-  cursor: pointer;
 }
 .toggle.home{
   width: 5rem;
 }
 .toggle-btn{
-  position: absolute;
-  right: .25rem;
   width: 100%;
   height: 100%;
   border-radius: 999px;
@@ -146,6 +259,8 @@ nav a.active{
   transition: right .3s;
 }
 .toggle-btn.home{
+  position: absolute;
+  right: .25rem;
   color: var(--secondary-color);
   background: var(--primary-color);
   font-size: 1rem;
@@ -179,6 +294,9 @@ main.home{
   font-size: 1.2rem;
   line-height: 1.5;
 }
+.about-container p .cta{
+  font-size: 1rem;
+}
 .latest-container{
   grid-column: 2;
   grid-row-start: 1;
@@ -187,6 +305,11 @@ main.home{
   flex-direction: column;
   align-items: end;
   align-self: end;
+}
+.latest-container a{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 .latest-container img{
   width: 80%;
@@ -207,6 +330,24 @@ main.home{
 .social-container a{
   font-size: 1.2rem;
   font-weight: 600;
+  position: relative;
+  width: fit-content;
+}
+.social-container a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color);
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale .4s;
+}
+.social-container a:hover::before{
+  scale: 1;
+  transform-origin: left;
 }
 
 /* MAIN ABOUT */
@@ -241,9 +382,6 @@ main.portfolio{
   margin: 0 2px;
   padding: .3rem 1rem;
 }
-.category-selector p:not(.active){
-  cursor: pointer;
-}
 .category-selector .active{
   border: 1px solid;
   border-radius: 999px;
@@ -276,7 +414,14 @@ main.portfolio{
 /* MAIN CONTACT */
 main.contact{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 3rem;
+}
+main.contact h2{
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
 }
 main.contact form{
   display: flex;
@@ -287,6 +432,8 @@ main.contact form{
 }
 main.contact form .cta{
   width: fit-content;
+  font-size: 1.2rem;
+  cursor: none;
 }
 .input-container{
   position: relative;
@@ -295,6 +442,7 @@ main.contact form .cta{
 .input{
   background: transparent;
   border: none;
+  border-radius: 0;
   border-bottom: 2px solid var(--secondary-color);
   width: 100%;
   resize: none;
@@ -302,6 +450,7 @@ main.contact form .cta{
   font-size: 1.2rem;
   color: var(--secondary-color);
   padding: 0 .3rem;
+  cursor: none;
 }
 textarea.input{
   max-height: 33rem;
@@ -332,13 +481,33 @@ textarea.input{
   font-size: 1.3rem;
   font-weight: bold;
 }
+.social-links a{
+  position: relative;
+  width: fit-content;
+}
+.social-links a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale .4s;
+}
+.social-links a:hover::before{
+  scale: 1;
+  transform-origin: right;
+}
 footer{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: .7rem;
   width: 100%;
-  padding: var(--paddingH) 0;
+  padding: var(--paddingH) var(--paddingW);
   border-top: 1px solid;
 }
 footer .heart{
