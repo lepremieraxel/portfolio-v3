@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
     <!-- META -->
     <meta charset="UTF-8" />
@@ -8,7 +8,6 @@
     <!-- LINK -->
     <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="/src/css/responsive.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,43 +16,76 @@
     <title>Page - Axel Marcial's Portfolio</title>
   </head>
   <body id="body">
+    <div class="noise"></div>
     <header>
-      <h1><a href="/">AXEL</a><a href="/">MARCIAL</a></h1>
+      <h1 class="main-title"><a href="/" class="menu-item"><span>AXEL</span><span>MARCIAL</span></a></h1>
       <div class="burger">
         <span></span><span></span>
       </div>
       <div class="menu-mobile">
-        <a href="/src/pages/about.html">ABOUT</a>
+        <a href="/"><span lang="en">HOME</span><span lang="fr">ACCUEIL</span></a>
+        <a href="/src/pages/about.html"><span lang="en">ABOUT</span><span lang="fr">À&nbsp;PROPOS</span></a>
         <a href="/src/pages/portfolio.html">PORTFOLIO</a>
         <a href="/src/pages/contact.html">CONTACT</a>
         <div class="switch-container">
-          <button>SWITCH TO DARK</button>
-          <button>SWITCH TO EN</button>
+          <button class="cta" id="theme"><span lang="en">SWITCH TO DARK</span><span lang="fr">MODE SOMBRE</span></button>
+          <button class="cta" id="lang"><span lang="en">SWITCH TO FR</span><span lang="fr">PASSER EN ANGLAIS</span></button>
         </div>
       </div>
       <nav>
-        <a href="/src/pages/about.html">ABOUT</a>
-        <a href="/src/pages/portfolio.html">PORTFOLIO</a>
-        <a href="/src/pages/contact.html">CONTACT</a>
+        <a href="/src/pages/about.html" class="menu-item">
+          <span lang="en">
+            <div>
+              <span style="--index: 0">A</span><span style="--index: 1">B</span><span style="--index: 2">O</span><span style="--index: 3">U</span><span style="--index: 4">T</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">A</span><span style="--index: 1">B</span><span style="--index: 2">O</span><span style="--index: 3">U</span><span style="--index: 4">T</span>
+            </div>
+          </span>
+          <span lang="fr">
+            <div>
+              <span style="--index: 0">À&nbsp;</span><span style="--index: 1">P</span><span style="--index: 2">R</span><span style="--index: 3">O</span><span style="--index: 4">P</span><span style="--index: 5">O</span><span style="--index: 6">S</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">À&nbsp;</span><span style="--index: 1">P</span><span style="--index: 2">R</span><span style="--index: 3">O</span><span style="--index: 4">P</span><span style="--index: 5">O</span><span style="--index: 6">S</span>
+            </div>
+          </span>
+        </a>
+        <a href="/src/pages/portfolio.html" class="menu-item">
+          <span>
+            <div>
+              <span style="--index: 0">P</span><span style="--index: 1">O</span><span style="--index: 2">R</span><span style="--index: 3">T</span><span style="--index: 4">F</span><span style="--index: 5">O</span><span style="--index: 6">L</span><span style="--index: 7">I</span><span style="--index: 8">O</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">P</span><span style="--index: 1">O</span><span style="--index: 2">R</span><span style="--index: 3">T</span><span style="--index: 4">F</span><span style="--index: 5">O</span><span style="--index: 6">L</span><span style="--index: 7">I</span><span style="--index: 8">O</span>
+            </div>
+          </span>
+        </a>
+        <a href="/src/pages/contact.html" class="menu-item">
+          <span>
+            <div>
+              <span style="--index: 0">C</span><span style="--index: 1">O</span><span style="--index: 2">N</span><span style="--index: 3">T</span><span style="--index: 4">A</span><span style="--index: 5">C</span><span style="--index: 6">T</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">C</span><span style="--index: 1">O</span><span style="--index: 2">N</span><span style="--index: 3">T</span><span style="--index: 4">A</span><span style="--index: 5">C</span><span style="--index: 6">T</span>
+            </div>
+          </span>
+        </a>
       </nav>
       <div class="toggle-container">
-        <label class="switch">
-          <input type="checkbox" value="theme">
-          <div class="slider-content">
-            <i class="ri-sun-fill"></i>
-          </div>
-        </label>
-        <label class="switch">
-          <input type="checkbox" value="lang">
-          <div class="slider-content">FR</div>
-        </label>
+        <div class="toggle" id="theme">
+          <div class="toggle-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg></div>
+        </div>
+        <div class="toggle" id="lang">
+          <div class="toggle-btn"><span lang="en">EN</span><span lang="fr">FR</span></div>
+        </div>
       </div>
     </header>
-    <main id="page">
-      <a class="return-btn" href="/src/pages/portfolio.html"><i class="ri-arrow-go-back-line"></i>&nbsp;RETURN</a>
+    <main class="page">
+      <a class="next-prev-btn" href="/src/pages/portfolio.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M5.82843 6.99955L8.36396 9.53509L6.94975 10.9493L2 5.99955L6.94975 1.0498L8.36396 2.46402L5.82843 4.99955H13C17.4183 4.99955 21 8.58127 21 12.9996C21 17.4178 17.4183 20.9996 13 20.9996H4V18.9996H13C16.3137 18.9996 19 16.3133 19 12.9996C19 9.68584 16.3137 6.99955 13 6.99955H5.82843Z"></path></svg>&nbsp;<span lang="en">RETURN</span><span lang="fr">RETOUR</span></a>
       <h2>RANDOM TITLE</h2>
       <article class="top-page-container">
-        <img src="/assets/img/latest.png" alt="my latest work">
+        <img src="/assets/img/latest-43.png" alt="my latest work">
         <div class="infos-container">
           <ul>
             <li>SEPT 22</li>
@@ -61,19 +93,33 @@
             <li>FRONT AND BACK-END DEV</li>
             <li>NEONPROD.UCTION</li>
           </ul>
-          <a href="">VISIT</a>
+          <a href="" class="cta"><span lang="en">VISIT</span><span lang="fr">VISITER</span></a>
         </div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis saepe placeat vero fuga laborum consequatur, earum voluptatum laudantium voluptas ratione voluptate possimus sequi velit laboriosam dolorum rerum quas itaque dolore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, officiis in adipisci, ipsam ab, voluptas quod vel qui velit quis cum quisquam delectus non tenetur nisi accusantium eaque libero nihil? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis neque sint natus ratione accusantium qui itaque ea, doloribus dolorem exercitationem iusto provident eligendi sequi labore iste voluptate, excepturi temporibus cupiditate.</p>
       </article>
       <article class="bottom-page-container">
         <div class="galery-slider">
-          <img src="/assets/img/latest.png" alt="my latest work">
-          <img src="/assets/img/me.jpg" alt="my latest work">
-          <img src="/assets/img/latest.png" alt="my latest work">
+          <img src="/assets/img/latest-43.png" alt="my latest work">
+          <img src="/assets/img/webdocu-1.png" alt="my latest work">
+          <img src="/assets/img/latest-43.png" alt="my latest work">
           <div class="click-area previous"></div>
           <div class="click-area next"></div>
         </div>
+        <div class="galery-pos-indicator">
+          <span></span>
+          <span class="active"></span>
+          <span></span>
+        </div>
+        <div class="prev-next-container">
+          <a href="" class="next-prev-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path></svg><span lang="en">PREVIOUS</span><span lang="fr">PRÉCÉDENT</span></a>
+          <a href="" class="next-prev-btn"><span lang="en">NEXT</span><span lang="fr">SUIVANT</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></a>
+        </div>
       </article>
     </main>
+    <div class="cursor"></div>
+    <script src="/src/js/toggleTheme.js"></script>
+    <script src="/src/js/toggleMenu.js"></script>
+    <script src="/src/js/toggleLang.js"></script>
+    <script src="/src/js/cursor.js"></script>
   </body>
 </html>

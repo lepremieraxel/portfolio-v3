@@ -18,6 +18,9 @@ html{
   --paddingW: 5rem;
   --paddingH: 3.125rem;
 }
+*::-webkit-scrollbar{
+  display: none;
+}
 .dark-theme{
   --primary-color: #090909;
   --secondary-color: #eae3d7;
@@ -30,6 +33,7 @@ body {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
+
 /* [lang="fr"]{
   display: none;
 } */
@@ -518,4 +522,109 @@ footer p{
   text-align: center;
   font-size: 1.1rem;
   font-weight: 500;
+}
+
+/* MAIN PAGE */
+main.page{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.next-prev-btn{
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.next-prev-btn svg{
+  fill: var(--secondary-color);
+}
+main.page h2{
+  font-size: 4rem;
+  text-align: center;
+}
+.top-page-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+  column-gap: 4rem;
+}
+.top-page-container img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+.top-page-container .infos-container{
+  grid-row: 2;
+  grid-column: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1rem;
+}
+.infos-container ul{
+  list-style: none;
+}
+.infos-container ul li{
+  font-size: 1.2rem;
+}
+.infos-container .cta{
+  height: fit-content;
+}
+.top-page-container p{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 2;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.bottom-page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+.galery-slider{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.galery-slider img{
+  width: 100%;
+}
+.click-area{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.click-area.previous{
+  left: 0;
+}
+.click-area.next{
+  right: 0;
+}
+.galery-pos-indicator{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: .7rem;
+}
+.galery-pos-indicator span{
+  width: .5rem;
+  aspect-ratio: 1;
+  border-radius: 99px;
+  background: var(--secondary-color);
+}
+.galery-pos-indicator span.active{
+  width: .8rem;
+}
+.prev-next-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }

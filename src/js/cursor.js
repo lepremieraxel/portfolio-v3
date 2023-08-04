@@ -62,6 +62,19 @@ links.forEach(link => {
   })
 });
 
+const nextPrevBtn = document.querySelectorAll('.next-prev-btn');
+nextPrevBtn.forEach(btn => {
+  btn.addEventListener('mouseover', () => {
+    let infos = btn.getBoundingClientRect();
+    cursor.style.width = infos.width+'px';
+    cursor.style.height = infos.height+'px';
+  })
+  btn.addEventListener('mouseleave', () => {
+    cursor.style.width = '1rem';
+    cursor.style.height = '1rem';
+  })
+});
+
 const catSelectors = document.querySelectorAll('.category-selector p');
 catSelectors.forEach(selector => {
   selector.addEventListener('mouseover', () => {

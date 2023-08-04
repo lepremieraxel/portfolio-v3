@@ -136,6 +136,17 @@
   main.contact form{
     width: 50vw;
   }
+  .galery-slider{
+    overflow: visible;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .click-area{
+    display: none;
+  }
+  .galery-pos-indicator{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -167,6 +178,10 @@
   .portfolio-container{
     grid-template-columns: repeat(2, 1fr);
   }
+  .top-page-container{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen  and (max-width: 768px) {
@@ -183,6 +198,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .cursor{
+    display: none;
+  }
+  html{
+    cursor: auto;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -195,6 +216,9 @@
   }
   .portfolio-container{
     grid-template-columns: repeat(1, 1fr);
+  }
+  main.page h2{
+    font-size: 3rem;
   }
 }
 
@@ -216,5 +240,8 @@
   }
   .menu-mobile a{
     font-size: 3rem;
+  }
+  main.page h2{
+    font-size: 2rem;
   }
 }
