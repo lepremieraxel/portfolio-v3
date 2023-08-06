@@ -7,8 +7,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
 
   $to = 'hello@axelmarcial.com';
   $subject = "[PORTFOLIO] - New message";
-  $body = '<!DOCTYPE html>
-  <html lang="fr">
+  $body = '<html lang="fr">
     <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
