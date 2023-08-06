@@ -84,19 +84,15 @@
       </header>
       <main class="home">
         <article class="about-container">
-          <p><span lang="en">Hi! I'm a 19 years old french web developer.<br>
-            I'm actually a student in a multimedia and internet degree at the institute of technology of Tarbes.<br>
-            My portfolio is slice in two parts, one for website and another for graphic design.</span><span lang="fr">Salut ! Je suis Axel, un développeur web français de 19 ans.
-              Je suis actuellement étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT de Tarbes.<br>
-              Mon portfolio est divisé en deux parties : une pour les sites web et l'autre pour les créations graphiques.</span> <a class="cta" href="/src/pages/about.html"><span lang="en">MORE</span><span lang="fr">VOIR&nbsp;PLUS</span></a></p>
-            </article>
-            <article class="latest-container">
-              <a href="/">
-                <p lang="en">LATEST WORK</p>
-                <p lang="fr">DERNIÈRE CRÉATION</p>
-                <img class="pf-el" src="" alt="my latest work">
-              </a>
-            </article>
+          <p><span lang="en">Hi! I'm a 19 years old french web developer.<br>I'm actually a student in a multimedia and internet degree at the institute of technology of Tarbes.<br>My portfolio is slice in two parts, one for website and another for graphic design.</span><span lang="fr">Salut ! Je suis Axel, un développeur web français de 19 ans. Je suis actuellement étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT de Tarbes.<br>Mon portfolio est divisé en deux parties : une pour les sites web et l'autre pour les créations graphiques.</span> <a class="cta" href="/src/pages/about.html"><span lang="en">MORE</span><span lang="fr">VOIR&nbsp;PLUS</span></a></p>
+        </article>
+        <article class="latest-container">
+          <a href="/">
+            <p lang="en">LATEST WORK</p>
+            <p lang="fr">DERNIÈRE CRÉATION</p>
+            <img class="pf-el" src="" alt="my latest work">
+          </a>
+        </article>
         <article class="social-container">
           <a href="mailto:hello@axelmarcial.com" class="link">EMAIL</a>
           <a href="https://github.com/lepremieraxel" target="_blank" class="link">GITHUB</a>
@@ -106,6 +102,19 @@
         </article>
       </main>
     </div>
+    <!-- <div class="loader">
+      <div></div>
+      <div><p>LOADING 0%</p></div>
+      <div></div>
+    </div> -->
+    <div class="cookie-popup">
+      <h2 class="cookie-title"><span lang="en">DO YOU LIKE COOKIES 🍪?</span><span lang="fr">AIMES-TU LES COOKIES 🍪 ?</span></h2>
+      <p class="cookie-text"><span lang="en">This site uses cookies. You can accept or decline them and this will block cookies on this site.</span><span lang="fr">Ce site utilise des cookie. Tu peux les accepter ou décider de les refuser et cela bloquera les cookies sur ce site.</span></p>
+      <div class="cookie-btn-container">
+        <a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout();" class="cookie-btn cta" data-cookie="deny"><span lang="en">DENY</span><span lang="fr">REFUSER</span></a>
+        <button class="cookie-btn cta" data-cookie="accept"><span lang="en">ACCEPT</span><span lang="fr">ACCEPTER</span></button>
+      </div>
+    </div>
     <div class="cursor"></div>
     <script src="/src/js/dynamic/latestDisplay.js"></script>
     <script src="/src/js/toggleTheme.js"></script>
@@ -113,5 +122,7 @@
     <script src="/src/js/toggleLang.js"></script>
     <script src="/src/js/cursor.js"></script>
     <script src="/src/js/lastPage.js"></script>
+    <script src="/src/js/cookiePopup.js"></script>
+    <!-- <script src="/src/js/loader.js"></script> -->
   </body>
 </html>

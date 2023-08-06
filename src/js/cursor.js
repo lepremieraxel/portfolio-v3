@@ -111,53 +111,56 @@ inputs.forEach(input => {
   })
 })
 
-window.onload = () => {
+function pfelHover(){
   const portfolioEl = document.querySelectorAll('.pf-el');
-  portfolioEl.forEach(portfolio => {
-    portfolio.addEventListener('mouseover', () => {
-      const text1 = document.createElement('p');
-      text1.classList.add('cursor-inner');
-      text1.textContent = portfolio.getAttribute('data-portfolio-title');
-      cursor.appendChild(text1);
-    
-      const text2 = document.createElement('p');
-      text2.classList.add('cursor-inner');
-      text2.textContent = portfolio.getAttribute('data-portfolio-year');
-      cursor.appendChild(text2);
-    
-      const actualLang = sessionStorage.getItem('lang');
-      const text3 = document.createElement('p');
-      text3.classList.add('cursor-inner');
-      text3.classList.add('cursor-small');
-    
-      const t3span1 = document.createElement('span');
-      t3span1.textContent = 'CLICK TO SEE MORE';
-      t3span1.setAttribute('lang', 'en');
-      if(actualLang === 'fr'){
-        t3span1.style.display = 'none';
-      }
-      text3.appendChild(t3span1);
-    
-      const t3span2 = document.createElement('span');
-      t3span2.textContent = 'CLIQUER POUR VOIR PLUS';
-      t3span2.setAttribute('lang', 'fr');
-      if(actualLang === 'en'){
-        t3span2.style.display = 'none';
-      }
-      text3.appendChild(t3span2);
-    
-      cursor.appendChild(text3);
-    
-      cursor.classList.add('portfolio-hover');
-    })
-    portfolio.addEventListener('mouseleave', () => {
-      const textToDelete = document.querySelectorAll('.cursor-inner');
-      textToDelete.forEach(text => {
-        cursor.removeChild(text);
-      });
-      cursor.classList.remove('portfolio-hover');
-    })
-  });
+portfolioEl.forEach(portfolio => {
+  portfolio.addEventListener('mouseover', () => {
+    const text1 = document.createElement('p');
+    text1.classList.add('cursor-inner');
+    text1.textContent = portfolio.getAttribute('data-portfolio-title');
+    cursor.appendChild(text1);
+  
+    const text2 = document.createElement('p');
+    text2.classList.add('cursor-inner');
+    text2.textContent = portfolio.getAttribute('data-portfolio-year');
+    cursor.appendChild(text2);
+  
+    const actualLang = sessionStorage.getItem('lang');
+    const text3 = document.createElement('p');
+    text3.classList.add('cursor-inner');
+    text3.classList.add('cursor-small');
+  
+    const t3span1 = document.createElement('span');
+    t3span1.textContent = 'CLICK TO SEE MORE';
+    t3span1.setAttribute('lang', 'en');
+    if(actualLang === 'fr'){
+      t3span1.style.display = 'none';
+    }
+    text3.appendChild(t3span1);
+  
+    const t3span2 = document.createElement('span');
+    t3span2.textContent = 'CLIQUER POUR VOIR PLUS';
+    t3span2.setAttribute('lang', 'fr');
+    if(actualLang === 'en'){
+      t3span2.style.display = 'none';
+    }
+    text3.appendChild(t3span2);
+  
+    cursor.appendChild(text3);
+  
+    cursor.classList.add('portfolio-hover');
+  })
+  portfolio.addEventListener('mouseleave', () => {
+    const textToDelete = document.querySelectorAll('.cursor-inner');
+    textToDelete.forEach(text => {
+      cursor.removeChild(text);
+    });
+    cursor.classList.remove('portfolio-hover');
+  })
+});
+}
+window.onload = () => {
+  pfelHover();
 }
 
 const previous = document.querySelector('.click-area.previous');
