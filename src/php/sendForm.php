@@ -5,7 +5,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
   $email = htmlspecialchars($_POST['email']);
   $message = htmlspecialchars($_POST['message']);
 
-  $to = $email;
+  $to = 'hello@axelmarcial.com';
   $subject = "[PORTFOLIO] - New message";
   $body = '<!DOCTYPE html>
   <html lang="fr">
