@@ -4,6 +4,7 @@ const emailInput = form.email;
 const messageInput = form.message;
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const charactersCount = document.querySelector('.characters-count');
+const sendBtn = form.send;
 
 let isNameValid = false;
 let isEmailValid = false;
@@ -45,40 +46,28 @@ function messageValidation(){
   }
 }
 
-const sendBtn = form.send;
-sendBtn.addEventListener("submit", function (e) {
-  e.preventDefaut();
-})
-
 form.oninput = () => {
   nameValidation();
   emailValidation();
   messageValidation();
+  if(isNameValid && isEmailValid && isMessageValid){
+    sendBtn.classList.remove('disabled');
+  } else {
+    sendBtn.classList.add('disabled');
+  }
 }
 
-if(isNameValid && isEmailValid && isMessageValid){
-  sendBtn.classList.remove('disabled');
-  const params = {
-    method: 'post',
-    body: JSON.stringify({
-      name: nameInput.value,
-      email: emailInput.value,
-      message: messageInput.value
-    }),
-    headers: {"Content-Type": "application/json"}
-  };
-  form.onsubmit = (e) => {
-    window.fetch('/src/php/sendForm.php', params)
-    .then(response => response.json())
+form.onsubmit = (e) => {
+  e.preventDefault();
+  if(isNameValid && isEmailValid && isMessageValid){
+    window.fetch(form.action, {
+      method: "post",
+      body: new URLSearchParams(new FormData(form))
+    }).then(response => response.json())
     .then(data => {
-      if(data['state'] == 'mail_sent'){
-        alert('mail envoyé.')
-      } else {
-        alert('error');
+      if(data['state'] == "sent"){
+        sendBtn.children[1].textContent = "MESSAGE SENT";
       }
     })
-    e.preventDefault();
   }
-} else {
-  sendBtn.classList.add('disabled');
 }
