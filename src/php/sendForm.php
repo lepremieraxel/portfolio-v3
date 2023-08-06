@@ -57,6 +57,6 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])){
   $headers[] = 'From: PORTFOLIO <portfolio@axelmarcial.com>';
   $headers[] = 'Reply-To: '.$name.'<'.$email.'>';
 
-  mail($to, $subject, $body, $headers);
+  mail($to, $subject, $body, implode("\r\n", $headers));
   echo '{"state":"sent"}';
 } else echo '{"state":"error"}';
