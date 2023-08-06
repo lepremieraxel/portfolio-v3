@@ -83,34 +83,22 @@
         </div>
       </header>
       <main class="portfolio">
+        <h2>PORTFOLIO</h2>
         <div class="category-selector">
           <p class="active" data-select="all"><span lang="fr">TOUT</span><span lang="en">ALL</span></p>
           <p data-select="website"><span lang="fr">SITE WEB</span><span lang="en">WEBSITE</span></p>
           <p data-select="design"><span lang="fr">GRAPHISME</span><span lang="en">GRAPHIC DESIGN</span></p>
         </div>
-        <div class="portfolio-container">
-          <article class="portfolio-el pf-el" data-cat="website" data-portfolio-title="titre 1" data-portfolio-year="2023">
-            <a href="/src/pages/page.html"></a>
-            <img src="/assets/img/latest-43.png" alt="portfolio 1">
-          </article>
-          <article class="portfolio-el pf-el" data-cat="design" data-portfolio-title="titre 1" data-portfolio-year="2023">
-            <a href="/src/pages/page.html"></a>
-            <img src="/assets/img/latest-43.png" alt="portfolio 2">
-          </article>
-          <article class="portfolio-el pf-el" data-cat="website" data-portfolio-title="titre 1" data-portfolio-year="2023">
-            <a href="/src/pages/page.html"></a>
-            <img src="/assets/img/latest-43.png" alt="portfolio 3">
-          </article>
-        </div>
+        <div class="portfolio-container"></div>
       </main>
     </div>
     <div class="cursor"></div>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="/src/js/dynamic/portfolioDisplay.js"></script>
     <script src="/src/js/toggleTheme.js"></script>
     <script src="/src/js/toggleMenu.js"></script>
     <script src="/src/js/toggleLang.js"></script>
     <script src="/src/js/categorySelector.js"></script>
     <script src="/src/js/cursor.js"></script>
-    <script src="/src/js/pageTransition.js"></script>
+    <script src="/src/js/lastPage.js"></script>
   </body>
 </html>

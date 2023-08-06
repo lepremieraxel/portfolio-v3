@@ -1,6 +1,5 @@
 const allSelectorEl = document.querySelectorAll('.category-selector p');
 
-const allPortfolioEl = document.querySelectorAll('.portfolio-el');
 
 const allCat = "all";
 const websiteCat = "website";
@@ -8,6 +7,7 @@ const designCat = "design";
 
 
 function select(cat = allCat){
+  const allPortfolioEl = document.querySelectorAll('.portfolio-el');
   switch(cat){
     case websiteCat:
       allPortfolioEl.forEach(portfolioEl => {

@@ -82,44 +82,34 @@
       </div>
     </header>
     <main class="page">
-      <a class="next-prev-btn" href="/src/pages/portfolio.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M5.82843 6.99955L8.36396 9.53509L6.94975 10.9493L2 5.99955L6.94975 1.0498L8.36396 2.46402L5.82843 4.99955H13C17.4183 4.99955 21 8.58127 21 12.9996C21 17.4178 17.4183 20.9996 13 20.9996H4V18.9996H13C16.3137 18.9996 19 16.3133 19 12.9996C19 9.68584 16.3137 6.99955 13 6.99955H5.82843Z"></path></svg>&nbsp;<span lang="en">RETURN</span><span lang="fr">RETOUR</span></a>
-      <h2>RANDOM TITLE</h2>
-      <article class="top-page-container">
-        <img src="/assets/img/latest-43.png" alt="my latest work">
-        <div class="infos-container">
-          <ul>
-            <li>SEPT 22</li>
-            <li>PORTFOLIO</li>
-            <li>FRONT AND BACK-END DEV</li>
-            <li>NEONPROD.UCTION</li>
-          </ul>
-          <a href="" class="cta"><span lang="en">VISIT</span><span lang="fr">VISITER</span></a>
-        </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis saepe placeat vero fuga laborum consequatur, earum voluptatum laudantium voluptas ratione voluptate possimus sequi velit laboriosam dolorum rerum quas itaque dolore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, officiis in adipisci, ipsam ab, voluptas quod vel qui velit quis cum quisquam delectus non tenetur nisi accusantium eaque libero nihil? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis neque sint natus ratione accusantium qui itaque ea, doloribus dolorem exercitationem iusto provident eligendi sequi labore iste voluptate, excepturi temporibus cupiditate.</p>
-      </article>
+      <a class="next-prev-btn" id="return"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M5.82843 6.99955L8.36396 9.53509L6.94975 10.9493L2 5.99955L6.94975 1.0498L8.36396 2.46402L5.82843 4.99955H13C17.4183 4.99955 21 8.58127 21 12.9996C21 17.4178 17.4183 20.9996 13 20.9996H4V18.9996H13C16.3137 18.9996 19 16.3133 19 12.9996C19 9.68584 16.3137 6.99955 13 6.99955H5.82843Z"></path></svg>&nbsp;<span lang="en">RETURN</span><span lang="fr">RETOUR</span></a>
+      <article class="top-page-container"></article>
       <article class="bottom-page-container">
         <div class="galery-slider">
-          <img src="/assets/img/latest-43.png" alt="my latest work">
-          <img src="/assets/img/webdocu-1.png" alt="my latest work">
-          <img src="/assets/img/latest-43.png" alt="my latest work">
           <div class="click-area previous"></div>
           <div class="click-area next"></div>
         </div>
-        <div class="galery-pos-indicator">
-          <span></span>
-          <span class="active"></span>
-          <span></span>
-        </div>
+        <div class="galery-pos-indicator"></div>
         <div class="prev-next-container">
+
           <a href="" class="next-prev-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path></svg><span lang="en">PREVIOUS</span><span lang="fr">PRÉCÉDENT</span></a>
+
           <a href="" class="next-prev-btn"><span lang="en">NEXT</span><span lang="fr">SUIVANT</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></a>
+          
         </div>
       </article>
     </main>
     <div class="cursor"></div>
+    <script src="/src/js/dynamic/pageDisplay.js"></script>
     <script src="/src/js/toggleTheme.js"></script>
     <script src="/src/js/toggleMenu.js"></script>
     <script src="/src/js/toggleLang.js"></script>
     <script src="/src/js/cursor.js"></script>
+    <script src="/src/js/lastPage.js"></script>
+    <script src="/src/js/galerySlider.js"></script>
+    <script>
+      let returnBtn = document.querySelector('#return');
+      returnBtn.href = sessionStorage.getItem('lastPage');
+    </script>
   </body>
 </html>

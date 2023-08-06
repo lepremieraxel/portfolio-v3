@@ -4,7 +4,7 @@ textareas.forEach(el => {
   el.addEventListener('input', () => {
     let scroll_height = el.scrollHeight;
     el.style.height = scroll_height + 'px';
-    let textareaCount = spanNbCharacters.parentElement.parentElement.children[0].value.length;
+    let textareaCount = el.value.length;
     spanNbCharacters.textContent = textareaCount;
     if(textareaCount == 1000){
       spanNbCharacters.parentElement.style.color = 'var(--red)';

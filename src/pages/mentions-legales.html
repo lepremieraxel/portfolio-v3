@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINK -->
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- TITLE -->
+    <title>Mentions Légales - Axel Marcial's Portfolio</title>
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header>
+      <h1 class="main-title">
+        <a href="/" class="menu-item"><span>AXEL</span><span>MARCIAL</span></a>
+      </h1>
+      <div class="burger"><span></span><span></span></div>
+      <div class="menu-mobile">
+        <a href="/"
+          ><span lang="en">HOME</span><span lang="fr">ACCUEIL</span></a
+        >
+        <a href="/src/pages/about.html"
+          ><span lang="en">ABOUT</span><span lang="fr">À&nbsp;PROPOS</span></a
+        >
+        <a href="/src/pages/portfolio.html">PORTFOLIO</a>
+        <a href="/src/pages/contact.html">CONTACT</a>
+        <div class="switch-container">
+          <button class="cta" id="theme">
+            <span lang="en">SWITCH TO DARK</span
+            ><span lang="fr">MODE SOMBRE</span>
+          </button>
+          <button class="cta" id="lang">
+            <span lang="en">SWITCH TO FR</span
+            ><span lang="fr">PASSER EN ANGLAIS</span>
+          </button>
+        </div>
+      </div>
+      <nav>
+        <a href="/src/pages/about.html" class="menu-item">
+          <span lang="en">
+            <div>
+              <span style="--index: 0">A</span><span style="--index: 1">B</span
+              ><span style="--index: 2">O</span><span style="--index: 3">U</span
+              ><span style="--index: 4">T</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">A</span><span style="--index: 1">B</span
+              ><span style="--index: 2">O</span><span style="--index: 3">U</span
+              ><span style="--index: 4">T</span>
+            </div>
+          </span>
+          <span lang="fr">
+            <div>
+              <span style="--index: 0">À&nbsp;</span
+              ><span style="--index: 1">P</span><span style="--index: 2">R</span
+              ><span style="--index: 3">O</span><span style="--index: 4">P</span
+              ><span style="--index: 5">O</span
+              ><span style="--index: 6">S</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">À&nbsp;</span
+              ><span style="--index: 1">P</span><span style="--index: 2">R</span
+              ><span style="--index: 3">O</span><span style="--index: 4">P</span
+              ><span style="--index: 5">O</span
+              ><span style="--index: 6">S</span>
+            </div>
+          </span>
+        </a>
+        <a href="/src/pages/portfolio.html" class="menu-item">
+          <span>
+            <div>
+              <span style="--index: 0">P</span><span style="--index: 1">O</span
+              ><span style="--index: 2">R</span><span style="--index: 3">T</span
+              ><span style="--index: 4">F</span><span style="--index: 5">O</span
+              ><span style="--index: 6">L</span><span style="--index: 7">I</span
+              ><span style="--index: 8">O</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">P</span><span style="--index: 1">O</span
+              ><span style="--index: 2">R</span><span style="--index: 3">T</span
+              ><span style="--index: 4">F</span><span style="--index: 5">O</span
+              ><span style="--index: 6">L</span><span style="--index: 7">I</span
+              ><span style="--index: 8">O</span>
+            </div>
+          </span>
+        </a>
+        <a href="/src/pages/contact.html" class="menu-item">
+          <span>
+            <div>
+              <span style="--index: 0">C</span><span style="--index: 1">O</span
+              ><span style="--index: 2">N</span><span style="--index: 3">T</span
+              ><span style="--index: 4">A</span><span style="--index: 5">C</span
+              ><span style="--index: 6">T</span>
+            </div>
+            <div class="hover-clone">
+              <span style="--index: 0">C</span><span style="--index: 1">O</span
+              ><span style="--index: 2">N</span><span style="--index: 3">T</span
+              ><span style="--index: 4">A</span><span style="--index: 5">C</span
+              ><span style="--index: 6">T</span>
+            </div>
+          </span>
+        </a>
+      </nav>
+      <div class="toggle-container">
+        <div class="toggle" id="theme">
+          <div class="toggle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="toggle" id="lang">
+          <div class="toggle-btn">
+            <span lang="en">EN</span><span lang="fr">FR</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="legal">
+      <h2>
+        <span lang="en">LEGAL</span><span lang="fr">MENTIONS LÉGALES</span>
+      </h2>
+      <span lang="en">
+        <div>
+          <h3>Creator, editor and owner of the website</h3>
+          <p>Publishing Director : Axel Marcial</p>
+          <p>
+            E-mail :
+            <a class="link" href="mailto:hello@axelmarcial.com"
+              >hello[at]axelmarcial.com</a
+            >
+          </p>
+          <p>
+            Website :
+            <a class="link" href="https://www.axelmarcial.com"
+              >www.axelmarcial.com</a
+            >
+          </p>
+        </div>
+        <div>
+          <h3>Host</h3>
+          <p>
+            This site is hosted by O2SWITCH, SAS with a capital of 100 000€.
+          </p>
+          <p>RCS Clermont Ferrand - 510 909 807 00032</p>
+          <p>Telecom operator declared ARCEP 09/2989 - AS50474</p>
+          <p>
+            Head office : Chemin des Pardiaux - 63000 Clermont-Ferrand - France
+          </p>
+          <p>
+            Phone : +33 4 44 44 60 40 (price of a call to a landline in France)
+          </p>
+        </div>
+        <div>
+          <h3>Website's terms of use</h3>
+          <p>
+            This website is the exclusive property of "Axel Marcial". Elements
+            of the site, such as text, still or animated images, databases,
+            programs, languages, etc., are protected by all applicable
+            legislation (copyright, suis generis rights of the database
+            producer, trademark rights, etc.). Authorization for reproduction is
+            granted only in digital form for consultation. Print-outs are
+            authorized for private copying for the exclusive use of the copier
+            within the meaning of article L. 122-5 2° of the French Intellectual
+            Property Code. The information contained in this website is given
+            for guidance only and is subject to change without notice. We cannot
+            guarantee the accuracy of the information contained herein, nor the
+            operation of the website in all circumstances. We assume no
+            responsibility for the information contained herein or for the
+            existence or availability of any offer mentioned on this website,
+            and disclaim all liability arising from negligence or otherwise in
+            respect of such information.
+          </p>
+        </div>
+        <div>
+          <h3>Intellectual property rights</h3>
+          <p>
+            All elements of this site are protected by copyright © - all rights
+            reserved. All intellectual property, trademarks, trade names and
+            logos are the property of "Axel Marcial" unless otherwise stated.
+            The drawings, photographs, images, texts, animated sequences with or
+            without sound, and other documentation represented on this website
+            are subject to industrial and/or intellectual property rights, owned
+            by " Axel Marcial ". As such, any reproduction, representation,
+            adaptation, translation and/or transformation, in part or in full,
+            or transfer to another site, is prohibited. Copying for private use
+            is authorized, provided the source is acknowledged. The content of
+            the site is offered for the private use of the visitor and no part
+            of its content may be redistributed, republished or stored in any
+            format whatsoever without the express authorization of the Designer.
+            The content of this site (images and text) is protected by French
+            law no. 57-298 of March 11, 1957 on artistic property (J.O. of March
+            14, 1957) and authors' rights. Any dispute arising from the
+            interpretation, use or content of this website shall be submitted to
+            the exclusive jurisdiction of the competent court having
+            jurisdiction over the headquarters of the publisher of this website.
+          </p>
+        </div>
+        <div>
+          <h3>LIMITATION OF LIABILITY</h3>
+          <p>
+            The information and presentations contained in the pages of this
+            site are provided for information purposes only and are subject to
+            change at any time without notice. The publisher cannot be held
+            liable in any way whatsoever for the use of such information for
+            private or professional purposes. Nor can it guarantee the accuracy,
+            precision or completeness of the information made available on this
+            site. Photos are not contractual. Under no circumstances may the
+            publisher or host of the site be held responsible for direct or
+            indirect damage, including but not limited to loss of profit,
+            customers or data, due to the use or inability to use the site and
+            its content, as well as the elements to which the site provides
+            access. This limitation applies both in contract and tort, even if
+            the publisher and/or host have been informed of the possibility of
+            such damage. The publisher of this website cannot guarantee that the
+            site will be permanently online and reserves the right, at its sole
+            discretion, to suspend access to all or part of the site's content.
+          </p>
+        </div>
+        <div>
+          <h3>APPLICABLE LAW AND JURISDICTION</h3>
+          <p>
+            All elements of this site are governed by French law. In accordance
+            with the French Data Protection Act of August 6, 2004, the data you
+            enter in the various forms or e-mail links are intended for the
+            publisher of this website and remain strictly confidential. You have
+            the right to access, modify, rectify and delete any data concerning
+            you (art.34 of the "Informatique et Libertés" law) by simple request
+            sent by e-mail. The publisher of this website is domiciled in
+            France. Any matter concerning this site is governed by French law
+            under the jurisdiction of a French court. Although this site is
+            accessible from outside France, all visitors are responsible for
+            using it in accordance with French laws and regulations and those of
+            their own country, including but not limited to computer uploads of
+            information.
+          </p>
+        </div>
+        <div>
+          <h3>HYPERTEXT LINKS TO THIRD-PARTY SITES</h3>
+          <p>
+            The publisher of the present website has not verified all the sites
+            that may be linked to his own and cannot be held responsible for the
+            content of sites to which links are made. Their presence in no way
+            implies that the present website publisher endorses their content or
+            accepts any responsibility for the content or use of such other
+            websites. The publisher of the present website cannot be held liable
+            for the erroneous or inaccurate, defamatory, injurious, slanderous,
+            untruthful, obscene, pornographic or blasphemous content of any of
+            these third-party sites. You therefore access the content of these
+            external sites at your own risk. The links proposed by the editor of
+            the present website, unless otherwise stated, are in no way a form
+            of promotion or advertising. They are provided either because they
+            are sources of information or because they offer additional and
+            complementary information to that provided on the present site.
+            These links are provided for the convenience of visitors only and
+            the publisher takes no responsibility for the use or consequences
+            that may result from linking. The publisher has taken reasonable
+            precautions to protect against computer viruses, but cannot
+            guarantee that this site or any linked site is completely free of
+            viruses or other hazards that may damage visitors' systems. Visitors
+            must first ensure that they themselves are adequately protected by
+            their own protection software.
+          </p>
+        </div>
+        <div>
+          <h3>COOKIE INFORMATION</h3>
+          <p>
+            When you visit our site, cookies are placed on your computer
+            in order to be attentive to your needs and expectations.
+            This section will help you understand how our site's
+            and how to configure them.
+          </p>
+          <h4>DEFINITION OF A COOKIE</h4>
+          <p>
+            A cookie is a small text file stored, subject to your choices, on your
+            your choices, on your terminal (computer, mobile or tablet) when you
+            visiting a site or viewing an advertisement.<br />
+            Its purpose is to collect information relating to your browsing
+            and to provide you with personalized services tailored to your
+            your terminal (computer, mobile or tablet). Cookies are
+            managed by your Internet browser, and only the sender of a cookie
+            can read or modify the information contained in a cookie.
+            contained therein.
+            <br /><br />
+            Cookies do not identify you personally, but only your browser.
+            your terminal's browser. Under no circumstances may they be
+            be used to retrieve data from or install viruses on your device.
+            install viruses. Cookies may be permanent (with a lifetime
+            limited to a maximum of 13 months) or temporary, depending on the use
+            the use to which they are put. There are different types of cookies (third-party or
+            functional):<br /><br />
+          </p>
+          <ul>
+            <li>
+              Essential cookies: session, load balancing, user ID
+              security.
+            </li>
+            <li>
+              Preference cookies: language, location, mobile device,
+              reference site, last visit and latest activities, recently
+              recently watched, Flash cookies, page history.
+            </li>
+            <li>
+              Social network plug-in tracking cookies: Facebook,
+              Twitter.
+            </li>
+            <li>
+              Audience measurement analysis cookies: Google Analytices, Adobe
+              Omniture.
+            </li>
+            <li>
+              Marketing cookies: advertising, market research,
+              campaign/promotion, fraud detection.
+            </li>
+            <li>Opt-out cookie: refusal of tracking.</li>
+          </ul>
+          <h4>COOKIES GOOGLE ANALYTICS</h4>
+          <p>This site uses Google Analytics, an audience measurement service provided by Google, which places cookies, with a unique identifier, on your device for statistical purposes to enable us to better understand the behavior of our users and thus improve the navigation needs, optimization and customization of our services on the site.<br>
+            This tool can use cookies to collect information and generate reports on website usage statistics without individual users being personally identified by Google. The "_ga" cookie is the one most commonly used by Google Analytics.<br>
+            These cookies collect information anonymously, including the number of visitors to our site and the pages visited, and produce only anonymous statistics and traffic volumes. The lifetime of these cookies does not exceed 13 months.
+            For further information, please consult the <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage#gajs" class="link">Everything you need to know about Google Analytics cookies</a>.<br><br>
+            
+            Thanks to the data collected via this tool, we regularly work to improve your browsing experience on this website.<br>
+            In order to adapt the site to visitors' requests, we measure the number of visits, the number of pages viewed, as well as visitor activity and the frequency with which they return to the various contents and sections of the site, in particular to understand how users arrive on the site, to understand the use and performance of the site and to improve its operation.<br>
+            These cookies may also be used to detect navigation problems and thus improve the ergonomics of our services.<br><br>
+            
+            If you do not wish our site to store cookies in your browser for audience measurement purposes, you can <a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout();" class="link">click on this deactivation link</a> which will store a cookie in your browser for the sole purpose of deactivating them.<br><br>
+            Google has also developed the "Opt-out Browser Add-on", which allows you to stop the flow of information transferred to Google Analytics even if cookies are enabled on your browser. If you wish to globally block the use of your data by Google Analytics JavaScript files, <a href="https://tools.google.com/dlpage/gaoptout" class="link">download</a> the browser add-on to deactivate Google Analytics.</p>
+            <h4>ACCEPT OR REJECT COOKIES, DEPENDING ON THE BROWSER YOU USE</h4>
+            <p>Although most Internet browsers are initially set up to accept cookies automatically, most allow you to modify the settings to block cookies or alert you when cookies are being sent to your device. If you wish, you can deactivate, activate or delete some or all cookies at any time by accessing your browser settings.<br><br>
+
+              Your browser can also be set to notify you when cookies are placed on your terminal and to ask you to accept them or not. You can accept or refuse cookies on a case-by-case basis, or refuse them systematically. You can also set your browser to send a code to websites indicating that you do not wish to be tracked ("Do No Track" option).<br><br>
+              
+              To manage cookies and your choices, the configuration of each browser is different. Information on how to activate, deactivate or delete cookies is available on your browser provider's website via the help menu.<br><br>
+              
+              Please note, however, that this setting may affect your access to content requiring the use of functional cookies. You should be aware that if cookies are deactivated or deleted, all of the site's functionalities may not function normally, preventing you from using the site under normal conditions, with the exception of basic functions. For example, you may not be able to visit certain parts of the site or receive personalized information when you visit the site.<br>
+              If your browser is configured to refuse all cookies, you will not be able to enjoy all content. In order to manage cookies more closely to your expectations, we invite you to configure your browser according to the purpose of the cookies. We advise you not to deactivate all cookies, as some are essential to the proper operation of a site, and deleting them would prevent it from working properly.</p>
+              <h4>Useful links to configure cookie settings for :</h4>
+              <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647?hl=en&sjid=5435564797504079476-EU" class="link">Google Chrome</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d" class="link">Internet Explorer</a></li>
+                <li><a href="https://support.apple.com/en-us/HT201265" class="link">Safari</a></li>
+                <li><a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies-preferences" class="link">Mozilla Firefox</a></li>
+                <li><a href="https://help.opera.com/en/latest/web-preferences/#cookies" class="link">Opéra</a></li>
+              </ul>
+              <p>For practical advice on these options and on how to delete cookies stored on your terminal, depending on the browser you are using, please consult the following section <a href="https://www.cnil.fr/fr/maitriser-mes-donnees" class="link">« Vos traces »</a> from the CNIL (Commission Nationale de l'Informatique et des Libertés) website.<br><br>
+
+                The configuration of each browser is different. It is described in the help menu and will help you to modify your cookie preferences. If you use several devices to view and access the sites (e.g. your computer, smartphone, tablet, etc.), you must ensure that the browser on each device is set to match your cookie preferences.</p>
+        </div>
+      </span>
+      <span lang="fr">
+        <div>
+          <h3>Créateur, éditeur et propriétaire du site</h3>
+          <p>Directeur de publication : Axel Marcial</p>
+          <p>
+            E-mail :
+            <a class="link" href="mailto:hello@axelmarcial.com"
+              >hello[at]axelmarcial.com</a
+            >
+          </p>
+          <p>
+            Site web :
+            <a class="link" href="https://www.axelmarcial.com"
+              >www.axelmarcial.com</a
+            >
+          </p>
+        </div>
+        <div>
+          <h3>Hébergeur</h3>
+          <p>
+            Ce site est hébergé par la société O2SWITCH, SAS au capital de 100
+            000€.
+          </p>
+          <p>RCS Clermont Ferrand - 510 909 807 00032</p>
+          <p>Opérateur Télécom déclaré ARCEP 09/2989 - AS50474</p>
+          <p>
+            Siège social : Chemin des Pardiaux - 63000 Clermont-Ferrand - France
+          </p>
+          <p>
+            Téléphone : +33 4 44 44 60 40 (prix d'un appel vers un poste fixe en
+            France)
+          </p>
+        </div>
+        <div>
+          <h3>Conditions d'utilisation du site</h3>
+          <p>
+            Le présent site internet est la propriété exclusive de « Axel
+            Marcial ». Les éléments du site, tels que les textes, les images
+            fixes ou animées, les bases de données, les programmes, les
+            langages,… etc, sont protégés par toute législation en vigueur (le
+            droit d'auteur, le droit suis generis du producteur de la base de
+            données, droit des marques…). L'autorisation de reproduction ne vous
+            est concédée que sous forme numérique en consultation. L'mpression
+            papier est autorisée aux fins de copie privée à l'usage exclusif du
+            copiste au sens de l'article L. 122-5 2° du Code de la Propriété
+            Intellectuelle. Les informations contenues dans le présent site
+            internet sont données à titre indicatif et sont sujettes à
+            changement sans préavis. Nous ne pouvons garantir l'exactitude des
+            informations qu'il contient, ni le fonctionnement du site internet
+            dans tous les cas de figure. Nous n'assumons aucune responsabilité
+            relative aux informations contenues et à l'existence ou la
+            disponibilité de toute offre mentionnée dans le présent site
+            internet et déclinons toute responsabilité découlant d'une
+            négligence ou autre concernant ces informations.
+          </p>
+        </div>
+        <div>
+          <h3>Droits de propriété intellectuelle</h3>
+          <p>
+            L'ensemble des éléments de ce site est protégé par copyright © -
+            tous droits réservés. Tous les éléments de propriété intellectuelle,
+            marques, noms commerciaux et logos sont la propriété de « Axel
+            Marcial » sauf mentions contraires. Les dessins, photographies,
+            images, textes, séquences animées sonores ou non, et autres
+            documentations représentés sur le présent site internet sont objet
+            de droits de propriété industrielle et/ou intellectuelle, propriétés
+            de « Axel Marcial ». À ce titre, toute reproduction, représentation,
+            adaptation, traduction, et/ou transformation, partielle ou
+            intégrale, ou transfert sur un autre site sont interdits. La copie à
+            usage privé de ces différents objets de droit est autorisée, sous
+            réserve de la mention de la source. Le contenu du site est proposé
+            pour un usage privé du visiteur et aucune partie de son contenu ne
+            doit être redistribuée, republiée ou stockée sous quelque format que
+            ce soit sans l'autorisation expresse du Concepteur. Le contenu de ce
+            site (images et textes) est protégé par la loi n° 57-298 du 11 mars
+            1957 sur la propriété artistique (J.O. du 14 mars 1957) et les
+            droits des auteurs. Tout différent lié à l'interprétation,
+            l'utilisation ou le contenu du présent site internet sera soumis à
+            la compétence exclusive du tribunal compétent relevant du siège de
+            l'éditeur de ce site.
+          </p>
+        </div>
+        <div>
+          <h3>LIMITATION DE RESPONSABILITÉ</h3>
+          <p>
+            Les renseignements et présentations contenus dans les pages de ce
+            site sont fournis à titre purement indicatif et restent susceptibles
+            de modifications à tout moment et sans préavis. Leur utilisation à
+            des fins privées ou professionnelles ne saurait engager la
+            responsabilité de l'éditeur du présent site internet de quelque
+            manière que ce soit. Il ne peut non plus garantir l'exactitude, la
+            précision ou l'exhaustivité des informations mises à disposition sur
+            ce site. Les photos ne sont pas contractuelles. En aucun cas,
+            l'éditeur ni l'hébergeur du site ne peuvent être tenus responsables
+            de dommages directs ou indirect, y compris mais de façon non
+            limitative, de la perte de bénéfice, de clientèle ou de données, dus
+            à l'utilisation ou de l'impossibilité d'utiliser le site et son
+            contenu, ainsi que les éléments auxquels le site permet d'accéder.
+            Cette limitation vaut, tant en matière contractuelle que
+            délictuelle, même si l'éditeur et/ou l'hébergeur ont été informé de
+            la possibilité d'un tel dommage. L'éditeur de ce site internet ne
+            peut garantir que le site sera en permanence en ligne et s'accorde
+            le droit, à sa complète discrétion, de suspendre l'accès de tout ou
+            partie du contenu du site.
+          </p>
+        </div>
+        <div>
+          <h3>LOI APPLICABLE ET JURIDICTION</h3>
+          <p>
+            Le présent site, dans tous ses éléments, est régi par la loi
+            française. Conformément à la loi du 6 Août 2004 dite “informatique
+            et libertés”, les données que vous saisissez dans les différents
+            formulaires ou liens email, sont destinées à l'éditeur de ce site
+            internet et demeurent strictement confidentielles. Vous disposez
+            d'un droit d'accès, de modification, de rectification et de
+            suppression des données qui vous concernent (art.34 de la loi «
+            Informatique et Libertés ») par simple demande envoyée par mail.
+            L'éditeur de ce site internet est domicilié en France. Tout sujet
+            concernant ce site est régi par la loi Française sous juridiction
+            d'un tribunal français. Bien que ce site soit accessible en dehors
+            du territoire français, tout visiteur est responsable de son
+            utilisation en accord avec les lois et réglementations françaises et
+            celles de son pays incluant, mais non limités, aux chargements
+            informatiques d'informations.
+          </p>
+        </div>
+        <div>
+          <h3>LIENS HYPERTEXTES VERS DES SITES TIERS</h3>
+          <p>
+            L'éditeur du présent site internet n'a pas vérifié l'intégralité des
+            sites qui peuvent être liés au sien et ne peut être tenu responsable
+            du contenu des sites vers lesquels des liens sont faits. Leur
+            présence ne signifie en aucune manière que l'éditeur du présent site
+            internet adhère à leur contenu ou accepte une responsabilité
+            quelconque pour le contenu ou l'utilisation de cet autre site
+            Internet. La responsabilité de l'éditeur du présent site internet ne
+            peut être engagée pour le contenu erroné ou inexact, diffamatoire,
+            injurieux, calomnieux, mensonger, obscène, pornographique,
+            blasphématoire de l'un ou l'autre de ces sites de tiers. Vous
+            accédez par conséquent au contenu de ces sites extérieurs sous votre
+            seule et entière responsabilité. Les liens proposés par l'éditeur du
+            présent site internet, sauf mention contraire, ne sont en aucune
+            façon une forme de promotion ou de publicité. Ils sont proposés car
+            soit ils sont les sources d'une information soit ils offrent des
+            informations supplémentaires et complémentaire à celles fournies sur
+            le site présent. Ces liens sont proposés pour l'agrément des
+            visiteurs seulement et l'éditeur ne prend aucune responsabilité
+            quant à l'utilisation ou aux conséquences qui pourraient découler de
+            la connection. L'éditeur a pris des précautions raisonnables pour sa
+            protection contre des virus informatiques mais ne peut garantir que
+            ce site ou tout autre site en lien soit complétement sécurisé de
+            tous les virus ou de tout autre dommage qui pourrait endommagé les
+            systèmes des visiteurs. Les visiteurs doivent s'assurer auparavant
+            qu'ils sont eux mêmes suffisamment protégés par leurs propres
+            logiciels de protection.
+          </p>
+        </div>
+        <div>
+          <h3>INFORMATION SUR LES COOKIES</h3>
+          <p>
+            Lors de la consultation de notre site, des cookies sont déposés sur
+            votre ordinateur afin d'être attentif à vos besoins et attentes.
+            Cette rubrique vous permet de comprendre comment fonctionnent les
+            cookies de notre site et comment les paramétrer.
+          </p>
+          <h4>DÉFINITION D'UN COOKIE</h4>
+          <p>
+            Un cookie est un petit fichier texte déposé, sous réserve de vos
+            choix, sur votre terminal (ordinateur, mobile ou tablette) lors de
+            la visite d'un site ou de la consultation d'une publicité.<br />
+            Il a pour but de collecter des informations relatives à votre
+            navigation et de vous adresser des services personnalisés adaptés à
+            votre terminal (ordinateur, mobile ou tablette). Les cookies sont
+            gérés par votre navigateur Internet et seul l'émetteur d'un cookie
+            est susceptible de lire ou de modifier les informations qui y sont
+            contenues.
+            <br /><br />
+            Les cookies ne vous identifient pas personnellement, mais uniquement
+            le navigateur de votre terminal. En aucun cas il ne saurait être
+            utilisé pour récupérer des données présentes sur votre appareil ou y
+            installer des virus. Les cookies peuvent être permanent (avec une
+            durée de vie limitée à 13 mois maximum) ou temporaire en fonction de
+            l'usage qui en est fait. Il en existe différents types (tiers ou
+            fonctionnels) :<br /><br />
+          </p>
+          <ul>
+            <li>
+              Cookies essentiels : session, répartition des charges, identifiant
+              utilisateur, sécurité.
+            </li>
+            <li>
+              Cookies de préférences : langue, localisation, appareil portable,
+              site de référence, dernière visite et dernières activités, vidéos
+              récemment regardées, cookies Flash, historique des pages.
+            </li>
+            <li>
+              Cookies de traçage des plug-in des réseaux sociaux : Facebook,
+              Twitter.
+            </li>
+            <li>
+              Cookies d'analyse de mesure d'audience : Google Analytices, Adobe
+              Omniture.
+            </li>
+            <li>
+              Cookies marketing : publicité, étude de marché,
+              campagne/promotion, détection des fraudes.
+            </li>
+            <li>Cookie d'opt-out : refus de trackage.</li>
+          </ul>
+          <h4>COOKIES GOOGLE ANALYTICS</h4>
+          <p>Ce site utilise Google Analytics, un service de mesure d'audience fourni par Google, qui place des cookies, avec un identifiant unique, sur votre appareil à des fins statistiques pour nous permettre de mieux comprendre le comportement de nos utilisateurs et ainsi améliorer les besoins de la navigation, l'optimisation et la personnalisation de nos services sur le site.<br>
+            Cet outil peut utiliser des cookies pour collecter des informations et générer des rapports sur les statistiques d'utilisation d'un site Web sans que les utilisateurs individuels soient identifiés personnellement par Google. Le cookie « _ga » est celui qui est le plus utilisé par Google Analytics.<br>
+            Ces cookies collectent des informations de manière anonyme, incluant le nombre de visiteurs de notre site et les pages visitées et ne produisent que des statistiques anonymes et des volumes de fréquentation. La durée de vie de ces cookies de mesure d'audience n'excède pas 13 mois.
+            Pour en savoir plus vous pouvez consulter la page <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=fr#gajs" class="link">Tout savoir sur les cookies de Google Analytics</a>.<br><br>
+            
+            Grâce aux données récoltées via cet outil, nous travaillions régulièrement pour améliorer votre expérience de navigation sur ce site Internet.<br>
+            En vue d'adapter le site aux demandes des visiteurs nous mesurons le nombre de visites, le nombre de pages vues ainsi que de l'activité des visiteurs et leur fréquence de retour sur les différents contenus et rubriques du site pour comprendre notamment comment les utilisateurs arrivent sur le site, connaître l'utilisation et les performances du site et en améliorer le fonctionnement.<br>
+            Ces cookies permettent également, le cas échéant, de détecter des problèmes de navigation et par conséquent d'améliorer l'ergonomie de nos services.<br><br>
+            
+            Si vous ne souhaitez pas que notre site enregistre des cookies dans votre navigateur à des fins de mesure d'audience, vous pouvez <a href="javascript:tagAnalyticsCNIL.CookieConsent.gaOptout();" class="link">cliquer sur ce lien de désactivation</a> qui enregistrera au sein de votre navigateur un cookie ayant pour unique objet de les désactiver.<br><br>
+            Google a également développé le “Opt-out Browser Add-on” qui permet de stopper le flux d'information transféré à Google Analytics même si les cookies sont activés sur votre navigateur. Si vous souhaitez bloquer globalement l'utilisation de vos données par les fichiers JavaScript de Google Analytics, <a href="https://tools.google.com/dlpage/gaoptout" class="link">téléchargez</a> le module complémentaire de navigateur pour la désactivation de Google Analytics.</p>
+            <h4>ACCEPTER OU REFUSER LES COOKIES, SELON LE NAVIGATEUR QUE VOUS UTILISEZ</h4>
+            <p>Bien que la plupart des navigateurs Internet soient initialement paramétrés pour accepter automatiquement les cookies, la plupart des navigateurs Internet vous permettent de modifier les paramètres pour bloquer les cookies ou vous alerter lorsque des cookies sont envoyés sur votre appareil. À tout moment, vous pouvez si vous le souhaitez désactiver, activer ou supprimer tout ou une partie des cookies en accédant aux paramètres de votre navigateur.<br><br>
+
+              Votre navigateur peut également être paramétré pour vous signaler les cookies qui sont déposés dans votre terminal et vous demander de les accepter ou pas. Vous pouvez accepter ou refuser les cookies au cas par cas ou bien les refuser systématiquement. Vous pouvez également paramétrer votre navigateur afin que celui-ci envoie un code indiquant aux sites Web que vous ne souhaitez pas être suivis (option « Do No Track »).<br><br>
+              
+              Pour la gestion des cookies et de vos choix, la configuration de chaque navigateur est différente. Des informations sur la procédure à suivre pour activer, désactiver ou supprimer les cookies sont disponibles sur le site web du fournisseur de votre navigateur Internet via le menu d'aide.<br><br>
+              
+              Nous vous rappelons toutefois que le paramétrage est susceptible de modifier vos conditions d'accès aux contenus nécessitant l'utilisation de cookies fonctionnels. Vous devez savoir que si des cookies sont désactivés ou supprimés, toutes les fonctionnalités du site pourront ne pas fonctionner normalement et cela vous empêchera d'utiliser le site dans des conditions normales, à l'exception des fonctions basiques. Par exemple vous pourrez être dans l'incapacité de visiter certaines parties du site ou de recevoir des informations personnalisées lorsque vous visitez le site.<br>
+              Si votre navigateur est configuré de manière à refuser l'ensemble des cookies, vous ne pourrez pas profiter d'une partie des contenus. Afin de gérer les cookies au plus près de vos attentes nous vous invitons à paramétrer votre navigateur en tenant compte de la finalité des cookies. Nous vous conseillons donc de ne pas désactiver l'intégralité des cookies car certains d'entre eux sont essentiels au bon fonctionnement d'un site et leur suppression empêcherait ça bonne marche.</p>
+              <h4>Liens utiles pour configurer les paramétrages de cookies pour :</h4>
+              <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647?hl=fr-FR" class="link">Google Chrome</a></li>
+                <li><a href="https://support.microsoft.com/fr-fr/help/17442/windows-internet-explorer-delete-manage-cookies" class="link">Internet Explorer</a></li>
+                <li><a href="https://support.apple.com/kb/ph21411?locale=fr_FR" class="link">Safari</a></li>
+                <li><a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies-preferences" class="link">Mozilla Firefox</a></li>
+                <li><a href="https://help.opera.com/Windows/10.20/fr/cookies.html" class="link">Opéra</a></li>
+              </ul>
+              <p>Pour disposer de conseils pratiques sur ces options et sur les modalités de suppression de fichiers cookies stockés dans votre Terminal, selon le navigateur que vous utilisez, nous vous invitons à consulter la rubrique <a href="https://www.cnil.fr/fr/maitriser-mes-donnees" class="link">« Vos traces »</a> du site de la CNIL (Commission Nationale de l'Informatique et des Libertés).<br><br>
+
+                La configuration de chaque navigateur est différente. Elle est décrite dans le menu d'aide et vous permettra de savoir de quelle manière modifier vos souhaits en matière de cookies. Si vous utilisez plusieurs appareils pour consulter les sites et y accéder (par exemple, votre ordinateur, votre smartphone, votre tablette, etc.), vous devez vous assurer que le navigateur sur chacun des appareils est paramétré pour correspondre à vos préférences en termes de cookies.</p>
+        </div>
+      </span>
+    </main>
+    <div class="cursor"></div>
+    <script src="/src/js/toggleTheme.js"></script>
+    <script src="/src/js/toggleMenu.js"></script>
+    <script src="/src/js/toggleLang.js"></script>
+    <script src="/src/js/cursor.js"></script>
+    <script src="/src/js/lastPage.js"></script>
+  </body>
+</html>

@@ -69,13 +69,19 @@
   .burger.active span:last-child{
     transform: rotate(-25deg) translateY(-2px);
   }
+  .cta:hover{
+    background: transparent;
+    color: var(--secondary-color);
+  }
   .menu-mobile{
     background: var(--primary-color);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
-    top: -100%;
+    top: -120%;
     left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -85,7 +91,7 @@
     transition: .4s;
   }
   .menu-mobile.active{
-    transform: translateY(100%);
+    transform: translateY(120%);
   }
   .menu-mobile a{
     font-size: 4rem;
@@ -141,6 +147,9 @@
     flex-direction: column;
     gap: 2rem;
   }
+  .galery-item{
+    transform: translateX(0) !important;
+  }
   .click-area{
     display: none;
   }
@@ -178,6 +187,12 @@
   .portfolio-container{
     grid-template-columns: repeat(2, 1fr);
   }
+  .portfolio-el .info{
+    display: inline;
+    position: absolute;
+    bottom: .3rem;
+    right: .5rem;
+  }
   .top-page-container{
     display: flex;
     flex-direction: column;
@@ -198,11 +213,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .cursor{
-    display: none;
-  }
   html{
     cursor: auto;
+  }
+  main.legal h2{
+    font-size: 3rem;
   }
 }
 
@@ -231,6 +246,9 @@
   }
   .category-selector{
     display: none;
+  }
+  main.legal h2{
+    font-size: 2rem;
   }
 }
 

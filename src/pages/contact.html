@@ -84,21 +84,21 @@
       </header>
       <main class="contact">
         <h2>SEND ME A MESSAGE</h2>
-        <form action="" method="post">
+        <form name="contactForm" method="post">
           <div class="input-container">
             <input class="input" type="text" name="name" id="name" placeholder=" " autocomplete="off">
-            <label for="name" class="label"><span lang="fr">NOM</span><span lang="en">NAME</span></label>
+            <label for="name" class="label"><span lang="fr">NOM*</span><span lang="en">NAME*</span></label>
           </div>
           <div class="input-container">
             <input class="input" type="text" name="email" id="email" placeholder=" " autocomplete="off">
-            <label for="email" class="label">EMAIL</label>
+            <label for="email" class="label">EMAIL*</label>
           </div>
           <div class="input-container">
-            <textarea class="input" name="message" id="message" placeholder=" " rows="1" maxlength="1000"></textarea>
-            <label for="message" class="label">MESSAGE</label>
+            <textarea class="input" name="message" id="message" placeholder=" " rows="1"></textarea>
+            <label for="message" class="label">MESSAGE*</label>
             <div class="characters-count"><p class="nb-characters">0</p><p class="total">/1000</p></div>
           </div>
-          <button class="cta"><span lang="fr">ENVOYER</span><span lang="en">SEND</span></button>
+          <button class="cta disabled" name="send"><span lang="fr">ENVOYER</span><span lang="en">SEND</span></button>
         </form>
         <div class="social-links">
           <a href="mailto:hello@axelmarcial.com" class="link">EMAIL</a>
@@ -109,16 +109,16 @@
       </main>
       <footer>
         <p><span lang="fr">DESIGNÉ ET DÉVELOPPÉ AVEC </span><span lang="en">DESIGNED AND DEVELOPED WITH </span><span class="heart">&hearts;</span>&nbsp;<span lang="fr">PAR </span><span lang="en">BY </span>AXEL MARCIAL</p>
-        <p>&copy; <span lang="fr">TOUS DROITS RÉSERVÉS</span><span lang="en">ALL RIGHTS RESERVED</span> - 2023 - <a href="/src/pages/mentions-légales.html" class="link"><span lang="fr">MENTIONS LÉGALES</span><span lang="en">LEGAL</span></a></p>
+        <p>&copy; <span lang="fr">TOUS DROITS RÉSERVÉS</span><span lang="en">ALL RIGHTS RESERVED</span> - 2023 - <a href="/src/pages/mentions-legales.html" class="link"><span lang="fr">MENTIONS LÉGALES</span><span lang="en">LEGAL</span></a></p>
       </footer>
     </div>
     <div class="cursor"></div>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="/src/js/toggleTheme.js"></script>
     <script src="/src/js/toggleMenu.js"></script>
     <script src="/src/js/toggleLang.js"></script>
     <script src="/src/js/textarea.js"></script>
     <script src="/src/js/cursor.js"></script>
-    <script src="/src/js/pageTransition.js"></script>
+    <script src="/src/js/lastPage.js"></script>
+    <script src="/src/js/formValidation.js"></script>
   </body>
   </html>
