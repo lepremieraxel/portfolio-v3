@@ -5,19 +5,19 @@ cookieBtn.forEach(btn => {
   btn.onclick = () => {
     let isAccept = btn.getAttribute('data-cookie') == 'accept' ? true : false;
     if(isAccept){
-      localStorage.setItem('cookieState', 'accepted');
+      sessionStorage.setItem('cookieState', 'accepted');
       cookiePopup.classList.remove('active');
     } else {
-      localStorage.setItem('cookieState', 'denied');
+      sessionStorage.setItem('cookieState', 'denied');
       cookiePopup.classList.remove('active');
     }
   }
 });
 
 window.onload = () => {
-  if(localStorage.getItem('cookieState') == null){
+  if(sessionStorage.getItem('cookieState') == null){
     cookiePopup.classList.add('active');
-  } else if(localStorage.getItem('cookieState') == 'accepted' || localStorage.getItem('cookieState') == 'denied'){
+  } else if(sessionStorage.getItem('cookieState') == 'accepted' || sessionStorage.getItem('cookieState') == 'denied'){
     cookiePopup.classList.remove('active');
   }
   pfelHover();
