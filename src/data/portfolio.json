@@ -1,47 +1,77 @@
 [
   {
-    "id": 3,
-    "title": "Test 3",
-    "date": "oct 2723",
+    "id": 5,
+    "title": "Portfolio V2",
+    "date": "feb 2023",
     "type": "website",
-    "link": "https://webdocu.axelmarcial.com",
-    "what1": "webdocu",
-    "what2": "webdesign",
+    "link": "https://portfolio-v2.axelmarcial.com",
+    "what1": "portfolio",
+    "what2": "design, front-end & back-end dev",
     "who": "axel marcial",
-    "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis saepe placeat vero fuga laborum consequatur, earum voluptatum laudantium voluptas ratione voluptate possimus sequi velit laboriosam dolorum rerum quas itaque dolore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, officiis in adipisci, ipsam ab, voluptas quod vel qui velit quis cum quisquam delectus non tenetur nisi accusantium eaque libero nihil? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis neque sint natus ratione accusantium qui itaque ea, doloribus dolorem exercitationem iusto provident eligendi sequi labore iste voluptate, excepturi temporibus cupiditate.",
-    "mainImg": "webdocu/latest-43.png",
+    "text": "",
+    "mainImg": "video-test.webm",
     "galery": [
-      "video-test.mp4","webdocu/latest-43.png","webdocu/webdocu-1.png"
+      "portfolio-v2/portfolio-v2-1.webp","portfolio-v2/portfolio-v2-2.webp","portfolio-v2/portfolio-v2-3.webp"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Neonprod.uction",
+    "date": "nov 2022",
+    "type": "website",
+    "link": "https://neonprod.axelmarcial.com",
+    "what1": "portfolio",
+    "what2": "design, front-end & back-end dev",
+    "who": "neonprod.uction",
+    "text": "",
+    "mainImg": "neonprod/neonprod-1.webp",
+    "galery": [
+      "neonprod/neonprod-1.webp","neonprod/neonprod-2.webp"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "VoteVote",
+    "date": "june 2022",
+    "type": "website",
+    "link": "https://votevote.axelmarcial.com",
+    "what1": "voting website",
+    "what2": "design, front-end & back-end dev",
+    "who": "MMI",
+    "text": "When I was studying, I had project weeks. During one of them, in groups of 5, we had to create a website where people could vote on a question and then display the results graphically. We also had to create an administrator section to manage the questions and answers available. I used html and css for the front-end and php linked to a mysql database for the back-end. For the first time, I also used a js library, chart.js, to display the graph. **This project was carried out during my studies.**",
+    "mainImg": "votevote/votevote-1.webp",
+    "galery": [
+      "votevote/votevote-1.webp","votevote/votevote-2.webp"
     ]
   },
   {
     "id": 2,
-    "title": "Titre 2",
-    "date": "oct 2023",
-    "type": "design",
-    "link": "https://webdocu.axelmarcial.com",
-    "what1": "webdocu",
-    "what2": "webdesign",
+    "title": "Portfolio V1",
+    "date": "june 2022",
+    "type": "website",
+    "link": "https://portfolio-v1.axelmarcial.com",
+    "what1": "waiting page",
+    "what2": "design & front-end dev",
     "who": "axel marcial",
-    "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis saepe placeat vero fuga laborum consequatur, earum voluptatum laudantium voluptas ratione voluptate possimus sequi velit laboriosam dolorum rerum quas itaque dolore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, officiis in adipisci, ipsam ab, voluptas quod vel qui velit quis cum quisquam delectus non tenetur nisi accusantium eaque libero nihil? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis neque sint natus ratione accusantium qui itaque ea, doloribus dolorem exercitationem iusto provident eligendi sequi labore iste voluptate, excepturi temporibus cupiditate.",
-    "mainImg": "webdocu/latest-43.png",
+    "text": "I created this site while waiting to create my complete portfolio, with the same graphic charter. In the meantime, I've created a new graphic charter and a new portfolio, my portfolio v2. So this site isn't a portfolio but rather a waiting page where you can send me a message. It's one of the first websites I put online. I used html, css, and php's mail function to create it.",
+    "mainImg": "portfolio-v1/portfolio-v1-1.webp",
     "galery": [
-      "video-test.mp4","webdocu/latest-43.png","webdocu/webdocu-1.png"
+      "portfolio-v1/portfolio-v1-1.webp"
     ]
   },
   {
     "id": 1,
-    "title": "Titre 1",
-    "date": "sept 2022",
+    "title": "Webdocu",
+    "date": "may 2022",
     "type": "website",
     "link": "https://webdocu.axelmarcial.com",
-    "what1": "portfolio",
-    "what2": "front and back-end dev",
-    "who": "neonprod.uction",
-    "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis saepe placeat vero fuga laborum consequatur, earum voluptatum laudantium voluptas ratione voluptate possimus sequi velit laboriosam dolorum rerum quas itaque dolore! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, officiis in adipisci, ipsam ab, voluptas quod vel qui velit quis cum quisquam delectus non tenetur nisi accusantium eaque libero nihil? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis neque sint natus ratione accusantium qui itaque ea, doloribus dolorem exercitationem iusto provident eligendi sequi labore iste voluptate, excepturi temporibus cupiditate.",
-    "mainImg": "webdocu/latest-43.png",
+    "what1": "webdocumentary",
+    "what2": "design, front-end & back-end dev",
+    "who": "MMI",
+    "text": "For a course project, in groups of 4, we had to produce a web documentary. We chose the theme \"Disney & Pixar\". We decided to produce a video telling the story of the theme, made by Jade, quizzes designed by Auréline and a virtual escape game designed by Louise. We also chose to implement a general discussion. Personally, I took care of the design, the front-end development in html and css and the back-end development in php linked to a mysql database. This was my first complete project and it enabled me to improve my php skills enormously. I also started using vanilla js thanks to this project, to run the escape game, while discovering dom management. **This project is neither a commercial collaboration nor an order from any company. It was carried out during my studies.**",
+    "mainImg": "webdocu/webdocu-1.webp",
     "galery": [
-      "webdocu/latest-43.png","webdocu/webdocu-1.png"
+      "webdocu/webdocu-1.webp", "webdocu/webdocu-2.webp"
     ]
   }
 ]

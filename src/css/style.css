@@ -37,10 +37,6 @@ body {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
-
-/* [lang="fr"]{
-  display: none;
-} */
 .cursor{
   width: 1rem;
   height: 1rem;
@@ -57,6 +53,8 @@ body {
 }
 .cursor-inner{
   text-transform: uppercase;
+  font-size: 1rem;
+  overflow: hidden;
 }
 .cursor-small{
   font-size: .7rem;
@@ -76,7 +74,6 @@ body {
   mix-blend-mode: normal;
   color: var(--secondary-color);
   background: var(--primary-color);
-  transition: .5s;
 }
 .dark-theme .portfolio-hover{
   background: var(--secondary-color);
@@ -107,10 +104,10 @@ body {
 	opacity: .09;
   z-index: -1;
 }
-/* .loader{
+.loader{
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -132,7 +129,7 @@ body {
   justify-content: center;
   font-size: 3rem;
   font-weight: bold;
-} */
+}
 .cookie-popup{
   position: absolute;
   bottom: 0;
@@ -356,10 +353,18 @@ main.home{
   display: flex;
   flex-direction: column;
   align-items: end;
+  width: 80%;
+  aspect-ratio: 4/3;
 }
 .latest-container img{
-  width: 80%;
+  width: 100%;
   filter: grayscale(1);
+}
+.latest-container video{
+  width: 100%;
+  filter: grayscale(1);
+  object-fit: cover;
+  aspect-ratio: 4/3;
 }
 .latest-container p{
   font-size: 1.5rem;
@@ -452,7 +457,14 @@ main.portfolio h2{
   z-index: 2;
   transition: filter .5s;
 }
-.portfolio-el:hover img{
+.portfolio-el video{
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  filter: grayscale(1);
+  transition: filter .5s;
+}
+.portfolio-el:hover img, .portfolio-el:hover video{
   filter: grayscale(0);
 }
 .portfolio-el a{
@@ -462,6 +474,7 @@ main.portfolio h2{
   height: 100%;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 .portfolio-el .info{
   display: none;
@@ -603,6 +616,7 @@ main.page{
 main.page h2{
   font-size: 4rem;
   text-align: center;
+  text-transform: uppercase;
 }
 .top-page-container{
   display: grid;
@@ -613,6 +627,11 @@ main.page h2{
 .top-page-container img{
   width: 100%;
   aspect-ratio: 4 / 3;
+}
+.top-page-container video{
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  width: 100%;
 }
 .top-page-container .infos-container{
   grid-row: 2;
@@ -653,8 +672,13 @@ main.page h2{
   overflow: hidden;
   position: relative;
 }
-.galery-slider .galery-item{
-  min-width: 100%;
+.galery-slider img{
+  width: 100%;
+  transition: .4s;
+}
+.galery-slider video{
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
   width: 100%;
   transition: .4s;
 }

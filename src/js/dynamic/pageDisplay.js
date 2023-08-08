@@ -9,7 +9,7 @@ rawFile.open("GET", dataFile, true);
 rawFile.onreadystatechange = function () {
   if(rawFile.readyState === 4 && rawFile.status == '200'){
     const rawData = JSON.parse(rawFile.responseText);
-    let id = window.location.href.split('?')[1].split('&')[0].split('=')[1];
+    let id = window.location.href.split('/')[3];
     let newId = 0;
     rawData.forEach(data => {
       if(data.id == id){
@@ -17,10 +17,21 @@ rawFile.onreadystatechange = function () {
         pageTitle.textContent = data.title;
         pageContainer.insertBefore(pageTitle, topPageContainer);
 
-        const mainImg = document.createElement('img');
-        mainImg.src = `/assets/portfolio/${data.mainImg}`;
-        mainImg.alt = data.title;
-        topPageContainer.appendChild(mainImg);
+        let type = data.mainImg.split('.')[1];
+        if(type == 'png' || type == 'jpg' || type == 'jpeg' || type == 'gif' || type == 'svg' || type == 'webp'){
+          const mainImg = document.createElement('img');
+          mainImg.src = `/assets/portfolio/${data.mainImg}`;
+          mainImg.alt = data.title;
+          topPageContainer.appendChild(mainImg);
+        } else if(type == 'mp4' || type == 'mov' || type == 'avi' || type == 'webm'){
+          const mainVid = document.createElement('video');
+          mainVid.src = `/assets/portfolio/${data.mainImg}`;
+          mainVid.playsInline = true;
+          mainVid.autoplay = true;
+          mainVid.muted = true;
+          mainVid.loop = true;
+          topPageContainer.appendChild(mainVid);
+        }
 
         const infosContainer = document.createElement('div');
         infosContainer.classList.add('infos-container');
@@ -46,8 +57,9 @@ rawFile.onreadystatechange = function () {
 
         const visitBtn = document.createElement('a');
         visitBtn.classList.add('cta');
-        visitBtn.innerText = "VISIT";
+        visitBtn.textContent = 'VISIT';
         visitBtn.href = data.link;
+        visitBtn.target = '_blank';
         infosContainer.appendChild(visitBtn);
 
         topPageContainer.appendChild(infosContainer);
@@ -73,9 +85,10 @@ rawFile.onreadystatechange = function () {
             const video = document.createElement('video');
             video.classList.add('galery-item');
             video.src = `/assets/portfolio/${item}`;
-            video.setAttribute('autoplay', true);
-            video.setAttribute('muted', true);
-            video.setAttribute('loop', true);
+            video.playsInline = true;
+            video.autoplay = true;
+            video.muted = true;
+            video.loop = true;
             video.setAttribute('id', galeryId);
             galeryContainer.appendChild(video);
           }
@@ -93,20 +106,19 @@ rawFile.onreadystatechange = function () {
         const nextBtn = prevNextContainer.children[1];
         if(newId > 0){
           let prevTitle = rawData[newId-1].title.toLowerCase().split(' ').join('-');
-          prevBtn.href = `/src/pages/page.html?id=${rawData[newId-1].id}&t=${prevTitle}`;
+          prevBtn.href = `/${rawData[newId-1].id}/${prevTitle}/`;
         } else if(newId == 0){
           let prevTitle = rawData[rawData.length-1].title.toLowerCase().split(' ').join('-');
-          prevBtn.href = `/src/pages/page.html?id=${rawData[rawData.length-1].id}&t=${prevTitle}`;
+          prevBtn.href = `/${rawData[rawData.length-1].id}/${prevTitle}/`;
         }
 
         if(newId < rawData.length-1){
           let nextTitle = rawData[newId+1].title.toLowerCase().split(' ').join('-');
-          nextBtn.href = `/src/pages/page.html?id=${rawData[newId+1].id}&t=${nextTitle}`;
+          nextBtn.href = `/${rawData[newId+1].id}/${nextTitle}/`;
         } else if(newId == rawData.length-1){
           let nextTitle = rawData[0].title.toLowerCase().split(' ').join('-');
-          nextBtn.href = `/src/pages/page.html?id=${rawData[0].id}&t=${nextTitle}`;
+          nextBtn.href = `/${rawData[0].id}/${nextTitle}/`;
         }
-        
         ctaHover();
       }
       newId++;

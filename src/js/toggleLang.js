@@ -1,11 +1,12 @@
+const html = document.querySelector('html');
 const french = 'fr';
 const english = 'en';
 const defaultLang = english;
 const englishTogglePos = '.25rem';
 const frenchTogglePos = '2.75rem';
 
-const langBtnArr = document.querySelectorAll('#lang');
-const langToggleBtn = document.querySelector('#lang .toggle-btn');
+const langBtnArr = document.querySelectorAll('.lang');
+const langToggleBtn = document.querySelector('.lang .toggle-btn');
 
 const allFrench = document.querySelectorAll('[lang="fr"]');
 const allEnglish = document.querySelectorAll('[lang="en"]');
@@ -29,6 +30,7 @@ function setLang(lang = defaultLang){
     allFrench.forEach(frenchEl => {
       frenchEl.style.display = 'inline';
     });
+    html.setAttribute('lang', 'fr');
     langToggleBtn.style.right = frenchTogglePos;
   } else if(lang === english){
     allEnglish.forEach(englishEl => {
@@ -37,6 +39,7 @@ function setLang(lang = defaultLang){
     allFrench.forEach(frenchEl => {
       frenchEl.style.display = 'none';
     });
+    html.setAttribute('lang', 'en');
     langToggleBtn.style.right = englishTogglePos;
   }
 }

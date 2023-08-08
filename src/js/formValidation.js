@@ -66,7 +66,11 @@ form.onsubmit = (e) => {
     }).then(response => response.json())
     .then(data => {
       if(data['state'] == "sent"){
+        sendBtn.children[0].textContent = "MESSAGE ENVOYÉ";
         sendBtn.children[1].textContent = "MESSAGE SENT";
+      } else {
+        sendBtn.children[0].textContent = "ERREUR";
+        sendBtn.children[1].textContent = "ERROR";
       }
     })
   }

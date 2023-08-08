@@ -153,6 +153,7 @@ portfolioEl.forEach(portfolio => {
   portfolio.addEventListener('mouseleave', () => {
     const textToDelete = document.querySelectorAll('.cursor-inner');
     textToDelete.forEach(text => {
+      text.style.width = "0";
       cursor.removeChild(text);
     });
     cursor.classList.remove('portfolio-hover');

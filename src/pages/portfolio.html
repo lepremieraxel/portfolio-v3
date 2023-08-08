@@ -25,16 +25,16 @@
         </div>
         <div class="menu-mobile">
           <a href="/"><span lang="en">HOME</span><span lang="fr">ACCUEIL</span></a>
-          <a href="/src/pages/about.html"><span lang="en">ABOUT</span><span lang="fr">À&nbsp;PROPOS</span></a>
+          <a href="/about/"><span lang="en">ABOUT</span><span lang="fr">À&nbsp;PROPOS</span></a>
           <a href="">PORTFOLIO</a>
-          <a href="/src/pages/contact.html">CONTACT</a>
+          <a href="/contact/">CONTACT</a>
           <div class="switch-container">
-            <button class="cta" id="theme"><span lang="en">SWITCH TO DARK</span><span lang="fr">MODE SOMBRE</span></button>
-            <button class="cta" id="lang"><span lang="en">SWITCH TO FR</span><span lang="fr">PASSER EN ANGLAIS</span></button>
+            <button class="cta theme"><span lang="en">SWITCH TO DARK</span><span lang="fr">MODE SOMBRE</span></button>
+            <button class="cta lang"><span lang="en">SWITCH TO FR</span><span lang="fr">PASSER EN ANGLAIS</span></button>
           </div>
         </div>
         <nav>
-          <a href="/src/pages/about.html" class="menu-item">
+          <a href="/about/" class="menu-item">
             <span lang="en">
               <div>
                 <span style="--index: 0">A</span><span style="--index: 1">B</span><span style="--index: 2">O</span><span style="--index: 3">U</span><span style="--index: 4">T</span>
@@ -62,7 +62,7 @@
               </div>
             </span>
           </a>
-          <a href="/src/pages/contact.html" class="menu-item">
+          <a href="/contact/" class="menu-item">
             <span>
               <div>
                 <span style="--index: 0">C</span><span style="--index: 1">O</span><span style="--index: 2">N</span><span style="--index: 3">T</span><span style="--index: 4">A</span><span style="--index: 5">C</span><span style="--index: 6">T</span>
@@ -74,10 +74,10 @@
           </a>
         </nav>
         <div class="toggle-container">
-          <div class="toggle" id="theme">
+          <div class="toggle theme">
             <div class="toggle-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"></path></svg></div>
           </div>
-          <div class="toggle" id="lang">
+          <div class="toggle lang">
             <div class="toggle-btn"><span lang="en">EN</span><span lang="fr">FR</span></div>
           </div>
         </div>
@@ -92,6 +92,11 @@
         <div class="portfolio-container"></div>
       </main>
     </div>
+    <div class="loader">
+      <div></div>
+      <div><p>LOADING 0%</p></div>
+      <div></div>
+    </div>
     <div class="cursor"></div>
     <script src="/src/js/dynamic/portfolioDisplay.js"></script>
     <script src="/src/js/toggleTheme.js"></script>
@@ -100,5 +105,6 @@
     <script src="/src/js/categorySelector.js"></script>
     <script src="/src/js/cursor.js"></script>
     <script src="/src/js/lastPage.js"></script>
+    <script src="/src/js/loader.js"></script>
   </body>
 </html>

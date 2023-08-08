@@ -33,24 +33,24 @@
         <a href="/"
           ><span lang="en">HOME</span><span lang="fr">ACCUEIL</span></a
         >
-        <a href="/src/pages/about.html"
+        <a href="/about/"
           ><span lang="en">ABOUT</span><span lang="fr">À&nbsp;PROPOS</span></a
         >
-        <a href="/src/pages/portfolio.html">PORTFOLIO</a>
-        <a href="/src/pages/contact.html">CONTACT</a>
+        <a href="/portfolio/">PORTFOLIO</a>
+        <a href="/contact/">CONTACT</a>
         <div class="switch-container">
-          <button class="cta" id="theme">
+          <button class="cta theme">
             <span lang="en">SWITCH TO DARK</span
             ><span lang="fr">MODE SOMBRE</span>
           </button>
-          <button class="cta" id="lang">
+          <button class="cta lang">
             <span lang="en">SWITCH TO FR</span
             ><span lang="fr">PASSER EN ANGLAIS</span>
           </button>
         </div>
       </div>
       <nav>
-        <a href="/src/pages/about.html" class="menu-item">
+        <a href="/about/" class="menu-item">
           <span lang="en">
             <div>
               <span style="--index: 0">A</span><span style="--index: 1">B</span
@@ -80,7 +80,7 @@
             </div>
           </span>
         </a>
-        <a href="/src/pages/portfolio.html" class="menu-item">
+        <a href="/portfolio/" class="menu-item">
           <span>
             <div>
               <span style="--index: 0">P</span><span style="--index: 1">O</span
@@ -98,7 +98,7 @@
             </div>
           </span>
         </a>
-        <a href="/src/pages/contact.html" class="menu-item">
+        <a href="/contact/" class="menu-item">
           <span>
             <div>
               <span style="--index: 0">C</span><span style="--index: 1">O</span
@@ -116,7 +116,7 @@
         </a>
       </nav>
       <div class="toggle-container">
-        <div class="toggle" id="theme">
+        <div class="toggle theme">
           <div class="toggle-btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
@@ -125,7 +125,7 @@
             </svg>
           </div>
         </div>
-        <div class="toggle" id="lang">
+        <div class="toggle lang">
           <div class="toggle-btn">
             <span lang="en">EN</span><span lang="fr">FR</span>
           </div>
@@ -608,11 +608,17 @@
         </div>
       </span>
     </main>
+    <div class="loader">
+      <div></div>
+      <div><p>LOADING 0%</p></div>
+      <div></div>
+    </div>
     <div class="cursor"></div>
     <script src="/src/js/toggleTheme.js"></script>
     <script src="/src/js/toggleMenu.js"></script>
     <script src="/src/js/toggleLang.js"></script>
     <script src="/src/js/cursor.js"></script>
     <script src="/src/js/lastPage.js"></script>
+    <script src="/src/js/loader.js"></script>
   </body>
 </html>

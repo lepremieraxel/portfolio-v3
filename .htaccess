@@ -1,0 +1,12 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^about/$ src/pages/about.html [L]
+
+RewriteRule ^portfolio/$ src/pages/portfolio.html [L]
+
+RewriteRule ^contact/$ src/pages/contact.html [L]
+
+RewriteRule ^mentions-legales/$ src/pages/mentions-legales.html [L]
+
+RewriteRule ^([^/]+)/([^/]+)/$ src/pages/page.html?id=$1&t=$2 [L]

@@ -8,9 +8,9 @@ const lightText = ['SWITCH TO LIGHT', 'MODE CLAIR'];
 const darkTogglePos = '.25rem';
 const lightTogglePos = '2.75rem';
 
-const toggleBtnArr = document.querySelectorAll('#theme');
-const toggleBtnSvg = document.querySelector('#theme .toggle-btn');
-const toggleBtnText = document.querySelector('button#theme');
+const toggleBtnArr = document.querySelectorAll('.theme');
+const toggleBtnSvg = document.querySelector('.theme .toggle-btn');
+const toggleBtnText = document.querySelector('button.theme');
 const cursorEl = document.querySelector('.cursor');
 
 initMode();

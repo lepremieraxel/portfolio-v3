@@ -19,22 +19,32 @@ rawFile.onreadystatechange = function () {
       let portfolioElLink = document.createElement('a');
       let newTitle = data.title.split(' ');
       newTitle = newTitle.join('-').toLowerCase();
-      portfolioElLink.href = `/src/pages/page.html?id=${data.id}&t=${newTitle}`;
+      portfolioElLink.href = `/${data.id}/${newTitle}/`;
+      portfolioEl.appendChild(portfolioElLink);
 
-      let portfolioElImg = document.createElement('img');
-      portfolioElImg.src = `/assets/portfolio/${data.mainImg}`;
-      portfolioElImg.alt = `image de presentation de ${data.title}`;
+      let type = data.mainImg.split('.')[1];
+      if(type == 'png' || type == 'jpg' || type == 'jpeg' || type == 'gif' || type == 'svg' || type == 'webp'){
+        let portfolioElImg = document.createElement('img');
+        portfolioElImg.src = `/assets/portfolio/${data.mainImg}`;
+        portfolioElImg.alt = data.title;
+        portfolioEl.appendChild(portfolioElImg);
+      } else if(type == 'mp4' || type == 'mov' || type == 'avi' || type == 'webm'){
+        let portfolioElVid = document.createElement('video');
+        portfolioElVid.src = `/assets/portfolio/${data.mainImg}`;
+        portfolioElVid.playsInline = true;
+        portfolioElVid.autoplay = true;
+        portfolioElVid.muted = true;
+        portfolioElVid.loop = true;
+        portfolioEl.appendChild(portfolioElVid);
+      }
 
       let portfolioElInfo = document.createElement('p');
       portfolioElInfo.classList.add('info');
       portfolioElInfo.textContent = `${data.title} - ${year[1]}`;
-
-      portfolioEl.appendChild(portfolioElLink);
-      portfolioEl.appendChild(portfolioElImg);
       portfolioEl.appendChild(portfolioElInfo);
+
       portfolioContainer.appendChild(portfolioEl);
     });
-    // console.log(rawData);
   }
 }
 rawFile.send(null);
