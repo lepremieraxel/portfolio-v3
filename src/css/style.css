@@ -104,32 +104,6 @@ body {
 	opacity: .09;
   z-index: -1;
 }
-.loader{
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: 1s;
-}
-.loader div{
-  min-width: 100%;
-  height: 100%;
-}
-.loader div:nth-child(odd){
-  background: var(--secondary-color);
-}
-.loader div:nth-child(even){
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
-}
 .cookie-popup{
   position: absolute;
   bottom: 0;
