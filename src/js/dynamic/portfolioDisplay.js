@@ -27,6 +27,7 @@ rawFile.onreadystatechange = function () {
         let portfolioElImg = document.createElement('img');
         portfolioElImg.src = `/assets/portfolio/${data.mainImg}`;
         portfolioElImg.alt = data.title;
+        portfolioElImg.loading = "lazy";
         portfolioEl.appendChild(portfolioElImg);
       } else if(type == 'mp4' || type == 'mov' || type == 'avi' || type == 'webm'){
         let portfolioElVid = document.createElement('video');
