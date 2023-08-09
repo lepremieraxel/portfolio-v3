@@ -108,6 +108,9 @@
     color: var(--secondary-color);
     font-size: 1.2rem;
   }
+  .switch-container .cta:hover{
+    background: var(--primary-color);
+  }
   .container{
     justify-content: start;
   }
@@ -175,6 +178,9 @@
   .latest-container{
     grid-column: 1;
     grid-row: 2;
+  }
+  .latest-container a{
+    width: 100%;
   }
   main.about{
     grid-template-columns: 1fr;

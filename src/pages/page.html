@@ -109,7 +109,11 @@
     <script src="/src/js/galerySlider.js"></script>
     <script>
       let returnBtn = document.querySelector('#return');
-      returnBtn.href = sessionStorage.getItem('lastPage');
+      if(sessionStorage.getItem('lastPage') !== null){
+        returnBtn.href = sessionStorage.getItem('lastPage');
+      } else {
+        returnBtn.href = "/";
+      }
     </script>
   </body>
 </html>

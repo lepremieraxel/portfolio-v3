@@ -8,7 +8,7 @@
     "what1": "portfolio",
     "what2": "design, front-end & back-end dev",
     "who": "axel marcial",
-    "text": "",
+    "text": "Before creating this site, I only had my v1 portfolio, which was a waiting page. But I had projects to show, so I motivated myself to design a portfolio and then developed it. I created the front-end with html, css and js. I used three.js to display a 3D model of my logo and animate it with mouse movement. I used php and a json file for the back-end.",
     "mainImg": "portfolio-v2/portfolio-v2-1.webp",
     "galery": [
       "portfolio-v2/portfolio-v2-1.webp","portfolio-v2/portfolio-v2-2.webp","portfolio-v2/portfolio-v2-3.webp"
@@ -23,7 +23,7 @@
     "what1": "portfolio",
     "what2": "design, front-end & back-end dev",
     "who": "neonprod.uction",
-    "text": "",
+    "text": "Again during my studies, in groups of 4, we had to create a site from A to Z, from design to development. We also had to come up with an idea for a site to create, and we decided to make group member Jade's portfolio, which is Neonprod.uction. I did the design, which is quite simple, on Adobe XD. Then I developed the site in html and css for the front-end, and in php linked to a mysql database for the back-end. Thanks to this site, we got the top mark, 20/20.**This project was carried out during my studies.**",
     "mainImg": "neonprod/neonprod-1.webp",
     "galery": [
       "neonprod/neonprod-1.webp","neonprod/neonprod-2.webp"
